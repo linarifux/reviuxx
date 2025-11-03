@@ -1,0 +1,86 @@
+{
+  "welcome": "Willkommen bei Reviuxx",
+  "hero_heading": "Ihre All-in-one-Lösung für effektives Bewertungsmanagement und gesteigerten Umsatz!",
+  "hero_subtext": "Bei Reviuxx verstehen wir, dass Ihr Ruf online von größter Bedeutung ist und direkten Einfluss auf Ihren Umsatz hat. Deshalb haben wir eine benutzerfreundliche und leistungsstarke Software entwickelt, die es Ihnen ermöglicht, Ihre Online-Reputation effektiv zu verwalten und zu verbessern, Ihre Kundeninteraktion zu optimieren und dabei Zeit zu sparen. Lassen Sie uns Ihnen helfen, das Vertrauen Ihrer Kunden zu gewinnen und Ihr Unternehmen erfolgreich zu machen!",
+  "try_free": "Kostenlos testen",
+  "nav": {
+    "home": "Startseite",
+    "about": "Über Uns",
+    "software": "Die Software",
+    "faqs": "FAQs",
+    "impressum": "Impressum",
+    "contact": "Kontakt",
+    "login": "Login"
+  },
+  "search_location": "Beauty Salon in QLD",
+  "best_business": "Beauty Center „Joy“",
+  "competitors": "Konkurrenten",
+  "reviews": "Bewertungen",
+  "overview_title": "Unsere Software integriert über 85 führende Bewertungsplattformen.",
+  "overview_paragraph": "Verwalten Sie Bewertungen an einem zentralen Ort und bieten Sie KI-gestützte Antworten. Fordern Sie aktiv Feedback an, sammeln Sie private Kommentare und nutzen Sie Video-Testimonials. Verwalten Sie mehrere Filialen mühelos. Steigern Sie Ihre Online-Reputation, optimieren Sie die Kundeninteraktion und sparen Sie Zeit — lassen Sie uns Ihnen helfen, erfolgreich zu sein!",
+  "overview_bottom": "Das bedeutet für Sie: Kein mühsames manuelles Monitoring mehr, sondern eine zentrale Plattform zur Verwaltung und Maximierung all Ihrer Bewertungen.",
+  "about_title": "Über Uns",
+  "about_text": "Wir sind Ihre All-in-One-Lösung für effektives Bewertungsmanagement, gesteigerte Umsätze und optimierte Kundeninteraktionen! In einer Zeit, in der der Online-Ruf über den Erfolg eines Unternehmens entscheidet, bieten wir Ihnen eine leistungsstarke Software, um Ihre Online-Präsenz zu optimieren und Ihr Unternehmen auf das nächste Level zu bringen.",
+  "software_title": "Die Software",
+  "software_text": "Mit unserer Software können lokale Unternehmen nicht nur Bewertungen auf verschiedenen Plattformen überwachen, sondern auch aktiv Feedback von Kunden anfordern. Sie haben die Möglichkeit, personalisierte Bewertungsanfragen zu senden und Ihre Kunden zu ermutigen, ihre Erfahrungen online zu teilen. Dies führt nicht nur zu einem besseren Online-Ruf, sondern auch zu höheren Umsätzen, da zufriedene Kunden eher bei Ihnen kaufen und Ihre Dienstleistungen weiterempfehlen.",
+  "software_section2_p1": "Darüber hinaus ermöglicht es Ihnen unsere Software, private Rückmeldungen zu sammeln, um wertvolle Einblicke in die Kundenzufriedenheit zu erhalten und Verbesserungspotenzial zu identifizieren. Indem Sie auf das Feedback Ihrer Kunden reagieren und Ihr Angebot entsprechend anpassen, steigern Sie nicht nur Ihre Zufriedenheit, sondern auch Ihre Rentabilität.",
+  "software_section2_p2": "Ein herausragendes Merkmal unserer Lösung ist die zentrale Verwaltung aller Bewertungen. Egal, ob Sie ein einzelnes Unternehmen oder eine Kette von Filialen betreiben, unsere Software ermöglicht es Ihnen, alle Bewertungen ganz einfach an einem Ort zu verwalten. Sie erhalten einen klaren Überblick über das Feedback Ihrer Kunden und können mühelos darauf reagieren.",
+  "software_section2_p3": "Und das Beste daran: Unsere Software nutzt künstliche Intelligenz, um Ihnen bei der Beantwortung von Bewertungen zu helfen. Mit intelligenten Antwortvorschlägen können Sie Zeit sparen und gleichzeitig professionell auf das Feedback Ihrer Kunden eingehen. Diese Funktion ist auch für mehrere Filialen gleichzeitig verfügbar, sodass Sie eine konsistente und effektive Kommunikation aufrechterhalten können.",
+  "pricing": {
+    "title": "Preise und Pakete",
+    "month": "Monat",
+    "year": "Jahr",
+    "order": "Bestellen",
+    "bronze": {
+      "title": "Paket Bronze",
+      "f1": "Benutzerdefinierter QR-Code",
+      "f2": "Benutzerdefiniertes Dashboard",
+      "f3": "Option zum Importieren von Daten",
+      "f4": "Analysetool",
+      "f5": "1 Bewertungsseite (z.B. Google und Tripadvisor)",
+      "f6": "300 E-Mails und 80 SMS im Monat",
+      "f7": "99€ pro Monat"
+    },
+    "silver": {
+      "title": "Paket Silver",
+      "f0": "Zusätzlich zum Paket Bronze",
+      "f1": "2 Bewertungsseiten (z.B. Google und Tripadvisor)",
+      "f2": "Einfaches Teilen von Bewertungen auf Social Media",
+      "f3": "500 E-Mails, 100 Whatsapp und 150 SMS im Monat",
+      "f4": "AI-Technologie für Bewertung Antworten"
+    },
+    "gold": {
+      "title": "Paket Gold",
+      "f0": "Zusätzlich zum Paket Silver",
+      "f1": "Zapier Integration",
+      "f2": "Branding entfernt",
+      "f3": "3000 Mails, 600 SMS und 1000 Whatsapp im Monat"
+    },
+    "platinum": {
+      "title": "Paket Platinum",
+      "f0": "Alles inklusive",
+      "f1": "10,000 Emails, 1,000 SMS und unbegrenzte Whatsapp im Monat",
+      "f2": "3000€ im Jahr"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "setup": "FAQs einrichten",
+    "search": "Suchst du etwas Bestimmtes?",
+    
+    "q1": "Welche Art von Kundensupport oder Schulungen steht den Nutzern Ihrer Plattform zur Verfügung?",
+    "a1": "Unser Support ist per Chat und E-Mail erreichbar. Wir bemühen uns, alle Anfragen innerhalb von 24 Stunden zu beantworten. Anleitungen zur Nutzung unserer Plattform und Schulungen werden selbstverständlich bereitgestellt.",
+    
+    "q2": "Welche Arten von Bewertungen können verwaltet und überwacht werden? Sind sie auf bestimmte Websites oder Plattformen beschränkt?",
+    "a2": "Sie können Bewertungen von Google, Facebook, TripAdvisor und vielen weiteren Plattformen verwalten.",
+
+    "q3": "Wie werden Bewertungen geteilt? Können sie direkt in sozialen Medien oder auf Bewertungsplattformen veröffentlicht werden?",
+    "a3": "Ja, Bewertungen können direkt in sozialen Medien geteilt und veröffentlicht werden.",
+
+    "q4": "Wie trägt Ihre Plattform zur Generierung von Bewertungen bei?",
+    "a4": "Durch automatisierte Anfrageprozesse, QR-Codes und SMS/Email-Feedbacklinks erhöhen Sie die Anzahl Ihrer Bewertungen erheblich.",
+
+    "q5": "Ist Ihre Plattform anpassungsfähig und skalierbar für Unternehmen unterschiedlicher Größe oder Branchen?",
+    "a5": "Ja, unsere Software ist skalierbar und perfekt geeignet für Einzelunternehmen bis hin zu großen Franchise-Ketten."
+  }
+}

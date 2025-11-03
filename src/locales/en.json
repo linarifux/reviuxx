@@ -1,0 +1,88 @@
+{
+  "welcome": "Welcome to Reviuxx",
+  "hero_heading": "Your all-in-one solution for effective review management and increased revenue!",
+  "hero_subtext": "At Reviuxx, we understand that your online reputation is of utmost importance and directly impacts your revenue. That's why we've developed user-friendly and powerful software that allows you to effectively manage and improve your online reputation, optimize customer interactions, and save time. Let us help you build customer trust and make your business a success!",
+  "try_free": "Try for Free",
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "software": "Software",
+    "faqs": "FAQs",
+    "impressum": "Impressum",
+    "contact": "Contact",
+    "login": "Login",
+    "search_location": "Beauty Salon in QLD",
+  "best_business": "Beauty Center “Joy”",
+  "competitors": "Competitors",
+  "reviews": "reviews"
+  },
+  "overview_title": "Our software integrates over 85 leading review platforms.",
+  "overview_paragraph": "Manage reviews in one central location and provide AI-powered responses. Actively solicit feedback, collect private comments, and leverage video testimonials. Manage multiple branches with ease. Boost your online reputation, optimize customer interaction, and save time — let us help you succeed!",
+  "overview_bottom": "This means for you: no more tedious manual monitoring, but a central platform to manage and maximize all your reviews.",
+  "about_title": "About Us",
+  "about_text": "We are your all-in-one solution for effective review management, increased revenue and optimized customer interaction! In a time when a company’s online reputation decides its success, we provide you with powerful software to optimize your online presence and take your business to the next level.",
+  "software_title": "The Software",
+  "software_text": "With our software, local businesses can not only monitor reviews on various platforms but also actively request feedback from customers. You have the option to send personalized review requests and encourage your customers to share their experiences online. This not only leads to better online reputation, but also increased revenue, as satisfied customers are more likely to buy from you and recommend your services.",
+  "software_section2_p1": "Furthermore, our software allows you to collect private feedback in order to gain valuable insights into customer satisfaction and identify areas for improvement. By responding to your customers' feedback and adjusting your offerings accordingly, you increase not only satisfaction but also profitability.",
+  "software_section2_p2": "A standout feature of our solution is centralized review management. Whether you run a single business or a chain with multiple branches, our platform enables you to manage all reviews in one place. You’ll get a clear overview of all customer feedback and can respond effortlessly.",
+  "software_section2_p3": "Best of all: Our software uses artificial intelligence to help you respond to reviews. With smart AI-generated reply suggestions, you save time while still responding professionally. Multi-branch support ensures consistent communication across all locations.",
+  "pricing": {
+    "title": "Pricing & Packages",
+    "month": "month",
+    "year": "year",
+    "order": "Order Now",
+    "bronze": {
+      "title": "Bronze Package",
+      "f1": "Custom QR Code",
+      "f2": "Custom Dashboard",
+      "f3": "Data Import Option",
+      "f4": "Analytics Tool",
+      "f5": "1 Review Platform (e.g. Google & Tripadvisor)",
+      "f6": "300 Emails & 80 SMS / month",
+      "f7": "€99 per month"
+    },
+    "silver": {
+      "title": "Silver Package",
+      "f0": "Includes Bronze features",
+      "f1": "2 Review Platforms",
+      "f2": "Share Reviews on Social Media",
+      "f3": "500 Emails, 100 WhatsApp & 150 SMS / month",
+      "f4": "AI Review Reply Assistant"
+    },
+    "gold": {
+      "title": "Gold Package",
+      "f0": "Includes Silver features",
+      "f1": "Zapier Automation",
+      "f2": "White Label Reviews",
+      "f3": "3000 Emails, 600 SMS & 1000 WhatsApp / month"
+    },
+    "platinum": {
+      "title": "Platinum Package",
+      "f0": "Everything Included",
+      "f1": "10,000 Emails, 1,000 SMS + Unlimited WhatsApp",
+      "f2": "€3000 per year"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "setup": "Setting up FAQs",
+    "search": "Looking for something?",
+    
+    "q1": "What type of customer support or training is available to platform users?",
+    "a1": "Our support is available via chat and email. We aim to respond to all inquiries within 24 hours. Guides and training materials are provided.",
+    
+    "q2": "What types of reviews can be managed and monitored? Are they limited to certain platforms?",
+    "a2": "You can manage reviews from Google, Facebook, TripAdvisor, and many more platforms.",
+
+    "q3": "How are reviews shared? Can they be posted directly on social media or review platforms?",
+    "a3": "Yes, reviews can be shared directly on social media and review websites.",
+
+    "q4": "How does your platform help generate more reviews?",
+    "a4": "Automated review requests, QR codes, and SMS/email invitations increase your review volume significantly.",
+
+    "q5": "Is your platform customizable and scalable for different business sizes or industries?",
+    "a5": "Yes, our software scales from small businesses to large franchise networks."
+  }
+}
+
+
