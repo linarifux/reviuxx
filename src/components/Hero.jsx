@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="max-w-xl">
         <p className="text-sm text-gray-300 mb-3">{t("welcome")}</p>
 
-        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+        <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
           {t("hero_heading")}
         </h1>
 
