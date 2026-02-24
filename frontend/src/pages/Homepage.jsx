@@ -1,4 +1,6 @@
+import AboutUs from '../components/home/AboutUs';
 import Hero from '../components/home/Hero';
+import IntegrationBanner from '../components/home/IntegrationBanner';
 
 const Homepage = () => {
   return (
@@ -9,6 +11,9 @@ const Homepage = () => {
         <Footer />
       */}
       <Hero />
+      <AboutUs />
+      {/* <AboutUs />
+      <IntegrationBanner /> */}
     </main>
   );
 };

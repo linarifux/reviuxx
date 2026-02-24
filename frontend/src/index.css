@@ -1,7 +1,81 @@
+/* Font import MUST be the absolute first thing in the file */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-brand-red: #D2042D; /* Replace with Reviuxx's exact Red */
-  --color-brand-black: #111111;
+  /* Brand Colors */
+  --color-brand-red: #D2042D; 
+  --color-brand-black: #050505; 
   --color-brand-white: #F8F9FA;
+
+  /* Global Font Configuration */
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Reusable Custom Animations */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+/* =========================================
+   Global Base Styles & Resets
+   ========================================= */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-white);
+  overflow-x: hidden;
+}
+
+/* Custom Text Selection */
+::selection {
+  background-color: var(--color-brand-red);
+  color: white;
+}
+
+/* =========================================
+   Premium Custom Scrollbar 
+   ========================================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 10px;
+  border: 2px solid #111111; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-red);
+}
+
+/* =========================================
+   Utility Classes for Complex Backgrounds
+   ========================================= */
+.glass-panel {
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button {
+  cursor: pointer;
 }
