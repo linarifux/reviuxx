@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #D2042D; /* Replace with Reviuxx's exact Red */
+  --color-brand-black: #111111;
+  --color-brand-white: #F8F9FA;
+}
