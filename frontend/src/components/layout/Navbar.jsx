@@ -7,7 +7,7 @@ import { Menu, X, Globe, ChevronRight, Sparkles } from 'lucide-react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [hoveredPath, setHoveredPath] = useState(null); // For magnetic hover effect
+  const [hoveredPath, setHoveredPath] = useState(null);
   const location = useLocation();
   const { t, i18n } = useTranslation();
 
@@ -27,12 +27,33 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: t('nav.about', 'About Us'), path: '/about' },
-    { name: t('nav.software', 'The Software'), path: '/software' },
-    { name: t('nav.pricing', 'Pricing'), path: '/pricing' },
-    { name: t('nav.faqs', 'FAQs'), path: '/faqs' },
-    { name: t('nav.contact', 'Contact'), path: '/contact' },
+    { name: t('nav.about', 'About Us'), path: '#about' },
+    { name: t('nav.software', 'The Software'), path: '#software' },
+    { name: t('nav.pricing', 'Pricing'), path: '#pricing' },
+    { name: t('nav.faqs', 'FAQs'), path: '#faqs' },
+    { name: t('nav.contact', 'Contact'), path: '#contact' },
   ];
+
+  // Smooth scroll handler
+  const handleScrollToSection = (e, path) => {
+    if (path.startsWith('#')) {
+      e.preventDefault();
+      const id = path.substring(1);
+      const element = document.getElementById(id);
+      
+      if (element) {
+        // Adjust the offset (e.g., 100px) based on the actual height of your fixed navbar
+        const headerOffset = 100; 
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
 
   // Mobile Animation Variants
   const mobileMenuVars = {
@@ -53,7 +74,6 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4 pointer-events-none">
       
-      {/* Dynamic Glass Pill Container */}
       <motion.div
         layout
         className={`pointer-events-auto relative flex items-center justify-between w-full max-w-7xl transition-all duration-500 ${
@@ -62,7 +82,6 @@ const Navbar = () => {
             : 'bg-transparent py-4 px-2'
         }`}
       >
-        {/* Animated Gradient Border (Only visible when scrolled) */}
         <AnimatePresence>
           {scrolled && (
             <motion.div
@@ -76,7 +95,6 @@ const Navbar = () => {
           )}
         </AnimatePresence>
 
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2 z-50 group relative">
           <div className="text-2xl font-bold tracking-tighter text-white flex items-center">
             Revi<span className="text-[#D2042D] transition-colors duration-300">uxx</span>
@@ -84,16 +102,17 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Desktop Navigation - Magnetic Tabs */}
         <nav className="hidden md:flex items-center gap-2" onMouseLeave={() => setHoveredPath(null)}>
           {navLinks.map((link) => {
-            const isActive = location.pathname === link.path;
+            // Check if active based on hash instead of standard pathname if you want active state on scroll
+            const isActive = location.hash === link.path || (!location.hash && link.path === '#about' && location.pathname === '/');
             const isHovered = hoveredPath === link.path;
             
             return (
               <Link
                 key={link.name}
                 to={link.path}
+                onClick={(e) => handleScrollToSection(e, link.path)}
                 onMouseEnter={() => setHoveredPath(link.path)}
                 className="relative px-4 py-2 text-sm font-medium transition-colors"
               >
@@ -103,7 +122,6 @@ const Navbar = () => {
                   {link.name}
                 </span>
                 
-                {/* Hover Background - Fluidly moves between links */}
                 {isHovered && !isActive && (
                   <motion.div
                     layoutId="navHover"
@@ -112,7 +130,6 @@ const Navbar = () => {
                   />
                 )}
 
-                {/* Active Indicator Line */}
                 {isActive && (
                   <motion.div
                     layoutId="navActive"
@@ -125,7 +142,6 @@ const Navbar = () => {
           })}
         </nav>
 
-        {/* Right Side Actions */}
         <div className="hidden md:flex items-center gap-4 z-10">
           <button 
             onClick={toggleLanguage}
@@ -148,7 +164,6 @@ const Navbar = () => {
           </motion.button>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center z-50">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -169,7 +184,6 @@ const Navbar = () => {
         </div>
       </motion.div>
 
-      {/* Cinematic Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -181,12 +195,15 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-8">
               {navLinks.map((link) => {
-                const isActive = location.pathname === link.path;
+                const isActive = location.hash === link.path;
                 return (
                   <motion.div variants={mobileLinkVars} key={link.name}>
                     <Link
                       to={link.path}
-                      onClick={() => setIsOpen(false)}
+                      onClick={(e) => {
+                        setIsOpen(false);
+                        handleScrollToSection(e, link.path);
+                      }}
                       className="group flex items-center justify-between"
                     >
                       <span className={`text-4xl font-extrabold tracking-tight transition-colors ${
