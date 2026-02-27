@@ -1,7 +1,11 @@
 import AboutUs from '../components/home/AboutUs';
+import ContactSection from '../components/home/ContactSection';
+import FaqSection from '../components/home/FaqSection';
 import Hero from '../components/home/Hero';
 import IntegrationBanner from '../components/home/IntegrationBanner';
+import PricingSection from '../components/home/PricingSection';
 import SoftwareSection from '../components/home/SoftwareSection';
+import TrustSection from '../components/home/TrustSection';
 
 const Homepage = () => {
   return (
@@ -10,6 +14,10 @@ const Homepage = () => {
       <AboutUs />
       <IntegrationBanner />
       <SoftwareSection />
+      <TrustSection />
+      <PricingSection />
+      <FaqSection />
+      <ContactSection />
     </main>
   );
 };

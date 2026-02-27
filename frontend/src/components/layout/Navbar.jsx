@@ -4,16 +4,62 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Globe, ChevronRight, Sparkles } from 'lucide-react';
 
+// Import the scrollToTop function
+import { scrollToTop } from '../ScrollToTop';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hoveredPath, setHoveredPath] = useState(null);
+  const [activePath, setActivePath] = useState('/'); // New state for scroll spy
   const location = useLocation();
   const { t, i18n } = useTranslation();
 
+  const navLinks = [
+    { name: t('nav.home', 'Home'), path: '/' },
+    { name: t('nav.about', 'About Us'), path: '#about' },
+    { name: t('nav.software', 'The Software'), path: '#software' },
+    { name: t('nav.pricing', 'Pricing'), path: '#pricing' },
+    { name: t('nav.faqs', 'FAQs'), path: '#faqs' },
+    { name: t('nav.contact', 'Contact'), path: '#contact' },
+  ];
+
+  // Combined Scroll Listener for background change AND Scroll Spy
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      // 1. Navbar Background
+      setScrolled(window.scrollY > 20);
+
+      // 2. Scroll Spy Logic
+      const sectionIds = ['about', 'software', 'pricing', 'faqs', 'contact'];
+      let currentActive = '/';
+      
+      // Calculate offset (Navbar height + a little buffer)
+      const scrollPosition = window.scrollY + 150; 
+
+      for (const id of sectionIds) {
+        const element = document.getElementById(id);
+        if (element) {
+          // Get absolute top position of the element
+          const top = element.getBoundingClientRect().top + window.scrollY;
+          if (top <= scrollPosition) {
+            currentActive = `#${id}`;
+          }
+        }
+      }
+
+      // Edge case: If scrolled to the absolute bottom of the page, activate the last link
+      if (window.innerHeight + Math.round(window.scrollY) >= document.body.offsetHeight - 50) {
+        currentActive = `#${sectionIds[sectionIds.length - 1]}`;
+      }
+
+      setActivePath(currentActive);
+    };
+
     window.addEventListener('scroll', handleScroll);
+    // Call it once on mount to set initial state correctly
+    handleScroll(); 
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -26,16 +72,17 @@ const Navbar = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en');
   };
 
-  const navLinks = [
-    { name: t('nav.about', 'About Us'), path: '#about' },
-    { name: t('nav.software', 'The Software'), path: '#software' },
-    { name: t('nav.pricing', 'Pricing'), path: '#pricing' },
-    { name: t('nav.faqs', 'FAQs'), path: '#faqs' },
-    { name: t('nav.contact', 'Contact'), path: '#contact' },
-  ];
-
-  // Smooth scroll handler
+  // Smooth scroll handler for nav sections
   const handleScrollToSection = (e, path) => {
+    // If clicking Home while already on the homepage, scroll to top
+    if (path === '/') {
+      if (location.pathname === '/') {
+        scrollToTop(e);
+      }
+      return;
+    }
+
+    // If clicking an anchor link
     if (path.startsWith('#')) {
       e.preventDefault();
       const id = path.substring(1);
@@ -95,17 +142,27 @@ const Navbar = () => {
           )}
         </AnimatePresence>
 
-        <Link to="/" className="flex items-center gap-2 z-50 group relative">
+        {/* Updated Logo Link with scrollToTop */}
+        <Link 
+          to="/" 
+          onClick={(e) => {
+            if (location.pathname === '/') {
+              scrollToTop(e);
+              setHoveredPath(null); // Clear active pill state when scrolling to top
+            }
+          }}
+          className="flex items-center gap-2 z-50 group relative"
+        >
           <div className="text-2xl font-bold tracking-tighter text-white flex items-center">
             Revi<span className="text-[#D2042D] transition-colors duration-300">uxx</span>
             <Sparkles size={14} className="text-[#D2042D] opacity-0 group-hover:opacity-100 group-hover:animate-pulse ml-1 transition-opacity" />
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-2" onMouseLeave={() => setHoveredPath(null)}>
+        <nav className="hidden lg:flex items-center gap-2" onMouseLeave={() => setHoveredPath(null)}>
           {navLinks.map((link) => {
-            // Check if active based on hash instead of standard pathname if you want active state on scroll
-            const isActive = location.hash === link.path || (!location.hash && link.path === '#about' && location.pathname === '/');
+            // UPDATED: Now active state relies entirely on our scroll spy state
+            const isActive = activePath === link.path;
             const isHovered = hoveredPath === link.path;
             
             return (
@@ -142,7 +199,7 @@ const Navbar = () => {
           })}
         </nav>
 
-        <div className="hidden md:flex items-center gap-4 z-10">
+        <div className="hidden lg:flex items-center gap-4 z-10">
           <button 
             onClick={toggleLanguage}
             className="group flex items-center gap-1.5 px-3 py-2 rounded-full text-gray-400 hover:text-white transition-colors text-sm font-medium relative overflow-hidden"
@@ -164,7 +221,7 @@ const Navbar = () => {
           </motion.button>
         </div>
 
-        <div className="md:hidden flex items-center z-50">
+        <div className="lg:hidden flex items-center z-50">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-gray-300 hover:text-white p-2 rounded-full focus:outline-none relative"
@@ -191,11 +248,13 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute top-0 left-0 w-full h-screen bg-[#050505]/90 pointer-events-auto md:hidden pt-32 px-6 flex flex-col z-40"
+            className="absolute top-0 left-0 w-full h-screen bg-[#050505]/90 pointer-events-auto lg:hidden pt-32 px-6 flex flex-col z-40"
           >
             <div className="flex flex-col gap-8">
               {navLinks.map((link) => {
-                const isActive = location.hash === link.path;
+                // UPDATED for mobile too
+                const isActive = activePath === link.path;
+                  
                 return (
                   <motion.div variants={mobileLinkVars} key={link.name}>
                     <Link

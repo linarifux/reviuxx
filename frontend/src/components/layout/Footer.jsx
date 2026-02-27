@@ -38,42 +38,47 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#050505] pt-20 overflow-hidden border-t border-white/5 mt-24">
+    <footer className="relative bg-[#050505] pt-24 overflow-hidden border-t border-white/5">
       
       {/* Background Ambient Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[400px] bg-[#D2042D]/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[400px] bg-[#D2042D]/10 rounded-full blur-[120px] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Top Section: CTA & Newsletter */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20 p-8 sm:p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl relative overflow-hidden group">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="grid lg:grid-cols-2 gap-10 items-center mb-24 p-8 sm:p-12 rounded-[2.5rem] bg-[#111111]/80 border border-white/10 backdrop-blur-xl relative overflow-hidden group shadow-2xl"
+        >
           {/* Subtle hover gradient inside the CTA box */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#D2042D]/0 via-[#D2042D]/5 to-transparent -translate-x-full group-hover:animate-[shimmer_3s_infinite] pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-r from-[#D2042D]/0 via-[#D2042D]/5 to-transparent -translate-x-full group-hover:animate-[shimmer_3s_infinite] pointer-events-none" />
           
-          <div>
-            <h3 className="text-3xl font-bold text-white mb-3 tracking-tight">
+          <div className="relative z-10">
+            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
               Ready to scale your reputation?
             </h3>
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-lg">
               Join thousands of businesses managing their reviews flawlessly.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
+          <div className="flex flex-col sm:flex-row gap-3 lg:justify-end relative z-10">
             <input 
               type="email" 
               placeholder="Enter your email" 
-              className="bg-black/50 border border-white/10 text-white px-6 py-3.5 rounded-full focus:outline-none focus:border-[#D2042D] focus:ring-1 focus:ring-[#D2042D] transition-all w-full sm:w-64"
+              className="bg-[#0a0a0a] border border-white/10 text-white px-6 py-4 rounded-2xl focus:outline-none focus:border-[#D2042D] focus:ring-1 focus:ring-[#D2042D] transition-all w-full sm:w-64 placeholder-gray-600 shadow-inner"
             />
-            <button className="bg-[#D2042D] hover:bg-red-700 text-white px-8 py-3.5 rounded-full font-bold transition-all shadow-[0_0_15px_rgba(210,4,45,0.4)] flex items-center justify-center gap-2 group/btn">
+            <button className="bg-[#D2042D] hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-bold transition-all shadow-[0_0_20px_rgba(210,4,45,0.4)] hover:shadow-[0_0_30px_rgba(210,4,45,0.6)] flex items-center justify-center gap-2 group/btn active:scale-[0.98]">
               Get Started
               <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 lg:gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           
           {/* Brand Column (Spans 2 cols on lg) */}
           <div className="col-span-2 lg:col-span-2">
@@ -106,7 +111,7 @@ const Footer = () => {
 
           {/* Links Columns */}
           <div>
-            <h4 className="text-white font-bold mb-6">Product</h4>
+            <h4 className="text-white font-bold mb-6 tracking-wide">Product</h4>
             <ul className="space-y-4">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
@@ -120,7 +125,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6">Resources</h4>
+            <h4 className="text-white font-bold mb-6 tracking-wide">Resources</h4>
             <ul className="space-y-4">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
@@ -134,7 +139,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6">Company</h4>
+            <h4 className="text-white font-bold mb-6 tracking-wide">Company</h4>
             <ul className="space-y-4">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -156,7 +161,7 @@ const Footer = () => {
           </p>
           
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-300 transition-colors cursor-pointer">
+            <div className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-300 transition-colors cursor-pointer bg-white/5 px-3 py-1.5 rounded-full border border-white/5">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>

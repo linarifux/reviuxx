@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Network, Sparkles, Video, Building2, MessageSquareOff, ChevronRight } from 'lucide-react';
+import { Network, Sparkles, Video, Building2, MessageSquareOff } from 'lucide-react';
 
 const AboutUs = () => {
   const { t } = useTranslation();
@@ -18,6 +18,9 @@ const AboutUs = () => {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
   };
+
+  // Extract branch locations from translations, default to empty array if undefined
+  const branchLocations = t('about.cards.branches.locations', { returnObjects: true }) || [];
 
   return (
     <section id="about" className="relative py-24 sm:py-32 overflow-hidden bg-[#050505]">
@@ -64,8 +67,8 @@ const AboutUs = () => {
               </div>
               <div>
                 <h4 className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500 mb-2">85+</h4>
-                <h5 className="text-2xl font-bold text-white mb-2">Leading Review Platforms</h5>
-                <p className="text-gray-400 font-medium">Seamlessly integrate with Google, Trustpilot, Yelp, Facebook, and dozens more. Never miss a customer's voice.</p>
+                <h5 className="text-2xl font-bold text-white mb-2">{t('about.cards.platforms.title')}</h5>
+                <p className="text-gray-400 font-medium">{t('about.cards.platforms.desc')}</p>
               </div>
             </div>
           </motion.div>
@@ -79,8 +82,8 @@ const AboutUs = () => {
                 <Sparkles size={24} className="text-[#D2042D]" />
               </div>
               <div>
-                <h5 className="text-xl font-bold text-white mb-2">AI-Powered Responses</h5>
-                <p className="text-gray-400 text-sm">Generate intelligent, personalized replies instantly to maintain perfect customer relationships.</p>
+                <h5 className="text-xl font-bold text-white mb-2">{t('about.cards.ai.title')}</h5>
+                <p className="text-gray-400 text-sm">{t('about.cards.ai.desc')}</p>
               </div>
             </div>
           </motion.div>
@@ -97,8 +100,8 @@ const AboutUs = () => {
                 </div>
               </div>
               <div>
-                <h5 className="text-xl font-bold text-white mb-2">Video & Private Feedback</h5>
-                <p className="text-gray-400 text-sm">Leverage authentic video testimonials while securely collecting private, constructive comments.</p>
+                <h5 className="text-xl font-bold text-white mb-2">{t('about.cards.feedback.title')}</h5>
+                <p className="text-gray-400 text-sm">{t('about.cards.feedback.desc')}</p>
               </div>
             </div>
           </motion.div>
@@ -110,14 +113,14 @@ const AboutUs = () => {
                 <div className="w-14 h-14 rounded-2xl bg-[#D2042D] flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(210,4,45,0.4)]">
                   <Building2 size={28} className="text-white" />
                 </div>
-                <h5 className="text-2xl font-bold text-white mb-2">Manage Multiple Branches</h5>
-                <p className="text-gray-400">Scale your business effortlessly. Monitor, compare, and optimize reputation scores across all your physical locations from one single dashboard.</p>
+                <h5 className="text-2xl font-bold text-white mb-2">{t('about.cards.branches.title')}</h5>
+                <p className="text-gray-400">{t('about.cards.branches.desc')}</p>
               </div>
               
               {/* Visual Graphic for Branches */}
               <div className="hidden md:flex flex-col gap-3 relative">
                 <div className="absolute left-4 top-4 bottom-4 w-px bg-white/10" />
-                {['New York HQ', 'Berlin Office', 'London Branch'].map((branch, i) => (
+                {branchLocations.map((branch, i) => (
                   <div key={branch} className="flex items-center gap-4 bg-white/5 rounded-xl p-3 border border-white/5 relative z-10 ml-8 transform transition-transform group-hover:translate-x-2" style={{ transitionDelay: `${i * 100}ms` }}>
                     <div className="w-2 h-2 rounded-full bg-[#D2042D]" />
                     <span className="text-white font-medium text-sm">{branch}</span>
