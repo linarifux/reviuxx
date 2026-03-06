@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, Globe, ChevronRight, Sparkles } from 'lucide-react';
+import { Menu, X, Globe, ChevronRight, Sparkles, UserCircle } from 'lucide-react';
 
-// Import the scrollToTop function
+// Import the scrollToTop function (Ensure this file exists in your project)
 import { scrollToTop } from '../ScrollToTop';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hoveredPath, setHoveredPath] = useState(null);
-  const [activePath, setActivePath] = useState('/'); // New state for scroll spy
+  const [activePath, setActivePath] = useState('/');
   const location = useLocation();
   const { t, i18n } = useTranslation();
 
@@ -24,23 +24,24 @@ const Navbar = () => {
     { name: t('nav.contact', 'Contact'), path: '#contact' },
   ];
 
-  // Combined Scroll Listener for background change AND Scroll Spy
+  // Dynamic Scroll Spy Logic
   useEffect(() => {
     const handleScroll = () => {
-      // 1. Navbar Background
+      // 1. Navbar Background State
       setScrolled(window.scrollY > 20);
 
-      // 2. Scroll Spy Logic
-      const sectionIds = ['about', 'software', 'pricing', 'faqs', 'contact'];
+      // 2. Dynamic Scroll Spy
+      // Automatically extract IDs from the navLinks array
+      const sectionIds = navLinks
+        .filter(link => link.path.startsWith('#'))
+        .map(link => link.path.substring(1));
+        
       let currentActive = '/';
-      
-      // Calculate offset (Navbar height + a little buffer)
-      const scrollPosition = window.scrollY + 150; 
+      const scrollPosition = window.scrollY + 150; // Buffer for navbar height
 
       for (const id of sectionIds) {
         const element = document.getElementById(id);
         if (element) {
-          // Get absolute top position of the element
           const top = element.getBoundingClientRect().top + window.scrollY;
           if (top <= scrollPosition) {
             currentActive = `#${id}`;
@@ -48,7 +49,7 @@ const Navbar = () => {
         }
       }
 
-      // Edge case: If scrolled to the absolute bottom of the page, activate the last link
+      // Edge case: Snap to last section if scrolled to the absolute bottom
       if (window.innerHeight + Math.round(window.scrollY) >= document.body.offsetHeight - 50) {
         currentActive = `#${sectionIds[sectionIds.length - 1]}`;
       }
@@ -57,12 +58,12 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    // Call it once on mount to set initial state correctly
-    handleScroll(); 
+    handleScroll(); // Trigger on mount
     
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navLinks]);
 
+  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'unset';
@@ -72,9 +73,8 @@ const Navbar = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en');
   };
 
-  // Smooth scroll handler for nav sections
+  // Smooth scroll handler
   const handleScrollToSection = (e, path) => {
-    // If clicking Home while already on the homepage, scroll to top
     if (path === '/') {
       if (location.pathname === '/') {
         scrollToTop(e);
@@ -82,14 +82,12 @@ const Navbar = () => {
       return;
     }
 
-    // If clicking an anchor link
     if (path.startsWith('#')) {
       e.preventDefault();
       const id = path.substring(1);
       const element = document.getElementById(id);
       
       if (element) {
-        // Adjust the offset (e.g., 100px) based on the actual height of your fixed navbar
         const headerOffset = 100; 
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.scrollY - headerOffset;
@@ -102,66 +100,68 @@ const Navbar = () => {
     }
   };
 
-  // Mobile Animation Variants
+  // Framer Motion Variants for Mobile Menu
   const mobileMenuVars = {
-    initial: { opacity: 0, backdropFilter: 'blur(0px)' },
+    initial: { opacity: 0, y: '-100%' },
     animate: { 
       opacity: 1, 
-      backdropFilter: 'blur(16px)',
-      transition: { duration: 0.4, staggerChildren: 0.08, delayChildren: 0.1 } 
+      y: 0,
+      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.08, delayChildren: 0.1 } 
     },
-    exit: { opacity: 0, backdropFilter: 'blur(0px)', transition: { duration: 0.3 } }
+    exit: { opacity: 0, y: '-20%', transition: { duration: 0.3, ease: 'easeInOut' } }
   };
 
   const mobileLinkVars = {
-    initial: { opacity: 0, y: 20, rotateX: -15 },
-    animate: { opacity: 1, y: 0, rotateX: 0, transition: { type: 'spring', damping: 20, stiffness: 100 } }
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0, transition: { type: 'spring', damping: 25, stiffness: 200 } }
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4 pointer-events-none">
       
+      {/* Main Navbar Container */}
       <motion.div
         layout
         className={`pointer-events-auto relative flex items-center justify-between w-full max-w-7xl transition-all duration-500 ${
           scrolled
-            ? 'bg-[#111111]/70 backdrop-blur-2xl rounded-full py-3 px-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)]'
+            ? 'bg-[#111111]/80 backdrop-blur-xl rounded-full py-3 px-4 md:px-6 shadow-[0_8px_32px_rgba(0,0,0,0.6)] border border-white/5'
             : 'bg-transparent py-4 px-2'
         }`}
       >
+        {/* Shimmer Effect when Scrolled */}
         <AnimatePresence>
           {scrolled && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 rounded-full border border-white/10 pointer-events-none overflow-hidden"
+              className="absolute inset-0 rounded-full overflow-hidden pointer-events-none"
             >
-              <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#D2042D]/30 to-transparent -translate-x-full animate-[shimmer_3s_infinite]" />
+              <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#D2042D]/20 to-transparent -translate-x-full animate-[shimmer_4s_infinite]" />
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Updated Logo Link with scrollToTop */}
+        {/* Logo */}
         <Link 
           to="/" 
           onClick={(e) => {
             if (location.pathname === '/') {
               scrollToTop(e);
-              setHoveredPath(null); // Clear active pill state when scrolling to top
+              setHoveredPath(null);
             }
           }}
-          className="flex items-center gap-2 z-50 group relative"
+          className="flex items-center gap-2 z-50 group relative px-2"
         >
-          <div className="text-2xl font-bold tracking-tighter text-white flex items-center">
+          <div className="text-2xl font-black tracking-tighter text-white flex items-center">
             Revi<span className="text-[#D2042D] transition-colors duration-300">uxx</span>
             <Sparkles size={14} className="text-[#D2042D] opacity-0 group-hover:opacity-100 group-hover:animate-pulse ml-1 transition-opacity" />
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-2" onMouseLeave={() => setHoveredPath(null)}>
+        {/* Desktop Navigation Links */}
+        <nav className="hidden lg:flex items-center gap-1" onMouseLeave={() => setHoveredPath(null)}>
           {navLinks.map((link) => {
-            // UPDATED: Now active state relies entirely on our scroll spy state
             const isActive = activePath === link.path;
             const isHovered = hoveredPath === link.path;
             
@@ -171,7 +171,7 @@ const Navbar = () => {
                 to={link.path}
                 onClick={(e) => handleScrollToSection(e, link.path)}
                 onMouseEnter={() => setHoveredPath(link.path)}
-                className="relative px-4 py-2 text-sm font-medium transition-colors"
+                className="relative px-4 py-2 text-sm font-bold tracking-wide transition-colors"
               >
                 <span className={`relative z-10 transition-colors duration-300 ${
                   isActive || isHovered ? 'text-white' : 'text-gray-400'
@@ -179,19 +179,21 @@ const Navbar = () => {
                   {link.name}
                 </span>
                 
+                {/* Hover Pill */}
                 {isHovered && !isActive && (
                   <motion.div
                     layoutId="navHover"
                     className="absolute inset-0 bg-white/5 rounded-full"
-                    transition={{ type: 'spring', bounce: 0.15, duration: 0.5 }}
+                    transition={{ type: 'spring', bounce: 0.15, duration: 0.4 }}
                   />
                 )}
 
+                {/* Active Indicator Dot */}
                 {isActive && (
                   <motion.div
                     layoutId="navActive"
-                    className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-[#D2042D] rounded-full"
-                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                    className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-[#D2042D] rounded-full shadow-[0_0_8px_rgba(210,4,45,0.8)]"
+                    transition={{ type: 'spring', bounce: 0.2, duration: 0.5 }}
                   />
                 )}
               </Link>
@@ -199,32 +201,39 @@ const Navbar = () => {
           })}
         </nav>
 
+        {/* Desktop Login & Language Toggle */}
         <div className="hidden lg:flex items-center gap-4 z-10">
+          
+          {/* Language Switcher */}
           <button 
             onClick={toggleLanguage}
-            className="group flex items-center gap-1.5 px-3 py-2 rounded-full text-gray-400 hover:text-white transition-colors text-sm font-medium relative overflow-hidden"
+            className="group flex items-center gap-1.5 px-3 py-2 rounded-full text-gray-400 hover:text-white transition-colors text-sm font-bold relative overflow-hidden"
           >
-            <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors rounded-full" />
-            <Globe size={16} className="group-hover:rotate-180 transition-transform duration-700 ease-in-out relative z-10" />
-            <span className="relative z-10">{i18n.language === 'de' ? 'DE' : 'EN'}</span>
+            <Globe size={16} className="group-hover:rotate-180 transition-transform duration-700 ease-in-out" />
+            <span>{i18n.language === 'de' ? 'DE' : 'EN'}</span>
           </button>
-          
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="group relative flex items-center justify-center gap-2 bg-brand-red text-white px-6 py-2.5 rounded-full font-bold transition-all shadow-[0_0_0_1px_rgba(255,255,255,0.2)] hover:bg-[#D2042D] hover:text-white"
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              {t('nav.login', 'Login')}
-              <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </span>
-          </motion.button>
+
+          {/* Primary Login Button */}
+          <Link to="https://my.climbo.com/#/login" onClick={() => setHoveredPath(null)}>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="group relative flex items-center justify-center gap-2 bg-[#D2042D] text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-[0_0_15px_rgba(210,4,45,0.4)] hover:bg-red-700 hover:shadow-[0_0_25px_rgba(210,4,45,0.6)] transition-all overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+              <span className="relative z-10 flex items-center gap-1.5">
+                <UserCircle size={16} />
+                {t('nav.login', 'Login')}
+              </span>
+            </motion.button>
+          </Link>
         </div>
 
+        {/* Mobile Menu Hamburger Toggle */}
         <div className="lg:hidden flex items-center z-50">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-300 hover:text-white p-2 rounded-full focus:outline-none relative"
+            className="text-gray-300 hover:text-white p-2 rounded-full focus:outline-none bg-white/5 border border-white/10"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -234,13 +243,14 @@ const Navbar = () => {
                 exit={{ opacity: 0, rotate: 90 }}
                 transition={{ duration: 0.2 }}
               >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
+                {isOpen ? <X size={20} /> : <Menu size={20} />}
               </motion.div>
             </AnimatePresence>
           </button>
         </div>
       </motion.div>
 
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -248,11 +258,12 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute top-0 left-0 w-full h-screen bg-[#050505]/90 pointer-events-auto lg:hidden pt-32 px-6 flex flex-col z-40"
+            className="absolute top-0 left-0 w-full h-screen bg-[#050505]/95 backdrop-blur-2xl pointer-events-auto lg:hidden pt-32 px-6 flex flex-col z-40 border-b border-white/10"
           >
-            <div className="flex flex-col gap-8">
+            
+            {/* Nav Links */}
+            <div className="flex flex-col gap-6">
               {navLinks.map((link) => {
-                // UPDATED for mobile too
                 const isActive = activePath === link.path;
                   
                 return (
@@ -263,37 +274,38 @@ const Navbar = () => {
                         setIsOpen(false);
                         handleScrollToSection(e, link.path);
                       }}
-                      className="group flex items-center justify-between"
+                      className="group flex items-center justify-between border-b border-white/5 pb-4"
                     >
-                      <span className={`text-4xl font-extrabold tracking-tight transition-colors ${
+                      <span className={`text-3xl font-black tracking-tight transition-colors ${
                         isActive ? 'text-white' : 'text-gray-500 group-hover:text-gray-300'
                       }`}>
                         {link.name}
                       </span>
-                      <ChevronRight size={24} className={`transition-all ${isActive ? 'text-[#D2042D] translate-x-0' : 'text-transparent -translate-x-4 group-hover:text-gray-500 group-hover:translate-x-0'}`} />
+                      <ChevronRight size={28} className={`transition-all ${isActive ? 'text-[#D2042D] translate-x-0' : 'text-transparent -translate-x-4 group-hover:text-gray-500 group-hover:translate-x-0'}`} />
                     </Link>
                   </motion.div>
                 );
               })}
             </div>
 
-            <motion.div variants={mobileLinkVars} className="mt-auto mb-12 flex flex-col gap-4">
-              <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent w-full mb-6" />
+            {/* Mobile Bottom Actions */}
+            <motion.div variants={mobileLinkVars} className="mt-auto mb-10 flex flex-col gap-4">
               
-              <div className="grid grid-cols-2 gap-4">
-                <button 
-                  onClick={() => { toggleLanguage(); setIsOpen(false); }}
-                  className="flex items-center justify-center gap-2 text-white text-sm font-medium py-4 bg-white/5 rounded-2xl border border-white/5 active:bg-white/10 transition-colors"
-                >
-                  <Globe size={18} />
-                  {i18n.language === 'de' ? 'EN Version' : 'DE Version'}
-                </button>
-                
-                <button className="bg-[#D2042D] text-white py-4 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(210,4,45,0.4)]">
+              <button 
+                onClick={() => { toggleLanguage(); setIsOpen(false); }}
+                className="flex items-center justify-center gap-2 text-gray-300 font-bold py-4 bg-white/5 rounded-2xl border border-white/10 active:bg-white/10 transition-colors w-full"
+              >
+                <Globe size={18} />
+                Switch to {i18n.language === 'de' ? 'English' : 'Deutsch'}
+              </button>
+
+              <Link to="https://my.climbo.com/#/login" onClick={() => setIsOpen(false)} className="w-full">
+                <button className="w-full bg-[#D2042D] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(210,4,45,0.4)] active:scale-[0.98] transition-transform">
+                  <UserCircle size={18} />
                   {t('nav.login', 'Login')}
-                  <ChevronRight size={18} />
                 </button>
-              </div>
+              </Link>
+
             </motion.div>
           </motion.div>
         )}

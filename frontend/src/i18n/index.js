@@ -18,9 +18,53 @@ const resources = {
         badge: 'Reviuxx Platform 2.0', 
         title_part1: 'Dominate Your', 
         title_part2: 'Online Reputation.', 
-        subtitle: 'The intelligent software to automate reviews, intercept negative feedback, and skyrocket your local search rankings instantly.', 
+        subtitle: 'Reviuxx helps you get more reviews, improve visibility, and generate measurable revenue. Everything in one dashboard: collect, reply to, and analyze reviews across platforms and locations.', 
         cta_primary: 'Start Free Trial', 
         cta_secondary: 'See how it works' 
+      },
+      stats: {
+        title: "Numbers & Facts",
+        items: [
+          { value: "76%", text: "visit a business within 24 hours after a local search." },
+          { value: "28%", text: "purchase after a local search." },
+          { value: "+1 Star", text: "lift can be associated with 5–9% higher revenue." }
+        ]
+      },
+      video: {
+        badge: "See it in action",
+        title: "How Reviuxx Transforms Your Business",
+        youtubeId: "oSzjsmB658Q"
+      },
+      industries: {
+        badge: "Industry Benefits",
+        title: "Tailored for your industry",
+        tabs: [
+          { id: "retail", name: "Retail & Supermarkets", desc: "Drive more foot traffic and repeat customers." },
+          { id: "gastro", name: "Restaurants", desc: "Generate more reservations and better occupancy." },
+          { id: "hotels", name: "Hotels", desc: "Get more bookings and more direct bookings, with fewer portal fees." },
+          { id: "medical", name: "Doctors & Law Firms", desc: "Generate more inquiries driven by stronger online trust." },
+          { id: "agency", name: "Agencies", desc: "Generate recurring revenue through white-label SaaS and reporting." }
+        ]
+      },
+      featuresList: {
+        badge: "Features",
+        title: "Everything in one dashboard",
+        items: [
+          { title: "All reviews in one place", desc: "Google, Facebook, Yelp, TripAdvisor and more—automatically in a central dashboard." },
+          { title: "Collect more reviews", desc: "Via QR, link, email, SMS and WhatsApp, including campaigns and reminders." },
+          { title: "Structured feedback routing", desc: "Capture private feedback before issues escalate publicly." },
+          { title: "Reply to reviews centrally", desc: "With templates and optional AI assistance." },
+          { title: "Automations and alerts", desc: "Instant notifications for new or critical reviews." },
+          { title: "Analytics and reporting", desc: "Track review volume, reply rate, ranking and competitor insights." },
+          { title: "Visibility boosters", desc: "Deploy website widgets, review badges and social posts." },
+          { title: "Google profile management", desc: "Keep hours, posts and photos up to date easily." },
+          { title: "Multi-location management", desc: "Perfect for chains and multi-site businesses." },
+          { title: "Agency & white-label mode", desc: "Use your branding, your packages and integrated billing." }
+        ]
+      },
+      cta: {
+        title: "Free profile check and a 90-day plan.",
+        subtitle: "Live in 14 days. Book a demo today."
       },
       integration: {
         prefix: 'This means for you: ',
@@ -179,9 +223,53 @@ const resources = {
         badge: 'Reviuxx Plattform 2.0', 
         title_part1: 'Dominiere Deine', 
         title_part2: 'Online-Reputation.', 
-        subtitle: 'Die intelligente Software, um Bewertungen zu automatisieren, negatives Feedback abzufangen und deine lokalen Suchrankings sofort zu steigern.', 
+        subtitle: 'Reviuxx bringt dir mehr Bewertungen, bessere Sichtbarkeit und messbar mehr Umsatz. Alles in einem Dashboard: Bewertungen sammeln, beantworten und auswerten – über alle Plattformen und Standorte.', 
         cta_primary: 'Kostenlos Testen', 
         cta_secondary: 'So funktioniert\'s' 
+      },
+      stats: {
+        title: "Zahlen & Fakten",
+        items: [
+          { value: "76%", text: "besuchen nach einer lokalen Suche innerhalb von 24 Stunden ein Geschäft." },
+          { value: "28%", text: "kaufen nach einer lokalen Suche." },
+          { value: "+1 Stern", text: "kann laut Studien mit 5–9 % mehr Umsatz verbunden sein." }
+        ]
+      },
+      video: {
+        badge: "Reviuxx in Aktion",
+        title: "Wie Reviuxx dein Unternehmen transformiert",
+        youtubeId: "za1gx_SWqzo"
+      },
+      industries: {
+        badge: "Branchen-Nutzen",
+        title: "Maßgeschneidert für deine Branche",
+        tabs: [
+          { id: "retail", name: "Retail & Supermärkte", desc: "Sorge für mehr Laufkundschaft und mache Gelegenheitskäufer zu Stammkunden." },
+          { id: "gastro", name: "Gastronomie", desc: "Generiere mehr Reservierungen und sorge für eine bessere Auslastung." },
+          { id: "hotels", name: "Hotels", desc: "Erhalte mehr Buchungen und mehr Direktbuchungen, weniger Portalgebühren." },
+          { id: "medical", name: "Ärzte & Anwälte", desc: "Erhalte mehr Anfragen durch stärkeren Online-Vertrauensaufbau." },
+          { id: "agency", name: "Agenturen", desc: "Wiederkehrender Umsatz durch White-Label SaaS und Reporting." }
+        ]
+      },
+      featuresList: {
+        badge: "Funktionen",
+        title: "Alles in einem Dashboard",
+        items: [
+          { title: "Alle Bewertungen an einem Ort", desc: "Google, Facebook, Yelp, TripAdvisor und mehr – automatisch im zentralen Dashboard." },
+          { title: "Mehr Bewertungen", desc: "Per QR, Link, E-Mail, SMS und WhatsApp – inklusive Kampagnen und Erinnerungen." },
+          { title: "Feedback strukturiert steuern", desc: "Interne Rückmeldung vor öffentlicher Bewertung möglich." },
+          { title: "Bewertungen zentral beantworten", desc: "Mit Vorlagen und optionaler KI-Unterstützung." },
+          { title: "Automationen & Alerts", desc: "Benachrichtigungen bei neuen oder kritischen Bewertungen." },
+          { title: "Analytics & Reporting", desc: "Bewertungsvolumen, Antwortquote, Ranking- und Wettbewerbsanalyse." },
+          { title: "Sichtbarkeit-Booster", desc: "Website-Widgets, Bewertungs-Badges und Social Posts." },
+          { title: "Google-Profilpflege", desc: "Öffnungszeiten, Beiträge und Fotos aktuell halten." },
+          { title: "Multi-Standort-Management", desc: "Ideal für Filialen und Ketten." },
+          { title: "Agentur- & White-Label-Modus", desc: "Eigenes Branding, eigene Pakete und integrierte Abrechnung." }
+        ]
+      },
+      cta: {
+        title: "Kostenloser Profil-Check und 90-Tage-Plan",
+        subtitle: "In 14 Tagen live. Jetzt Demo sichern."
       },
       integration: {
         prefix: 'Das bedeutet für dich: ',
