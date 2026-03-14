@@ -7,6 +7,8 @@ import { Menu, X, Globe, ChevronRight, Sparkles, UserCircle } from 'lucide-react
 // Import the scrollToTop function (Ensure this file exists in your project)
 import { scrollToTop } from '../ScrollToTop';
 
+import Logo from '../../assets/logo.png'; // Optional: If you have a logo image
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -151,12 +153,16 @@ const Navbar = () => {
               setHoveredPath(null);
             }
           }}
-          className="flex items-center gap-2 z-50 group relative px-2"
-        >
-          <div className="text-2xl font-black tracking-tighter text-white flex items-center">
-            Revi<span className="text-[#D2042D] transition-colors duration-300">uxx</span>
-            <Sparkles size={14} className="text-[#D2042D] opacity-0 group-hover:opacity-100 group-hover:animate-pulse ml-1 transition-opacity" />
+        > 
+
+          <div className="logo">
+            <img src={Logo} alt="Reviuxx Logo" className="w-20 object-contain" />
           </div>
+
+          {/* <div className="tracking-tighter flex items-center">
+            
+            
+          </div> */}
         </Link>
 
         {/* Desktop Navigation Links */}

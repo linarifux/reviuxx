@@ -191,7 +191,7 @@ const ContactSection = () => {
                 </div>
                 <div className="relative z-10">
                   <p className="text-sm font-medium text-gray-500 mb-1">{t('contact.emailLabel')}</p>
-                  <p className="text-white font-bold text-lg break-all group-hover:text-[#D2042D] transition-colors">
+                  <p className="text-white font-bold text-md break-all group-hover:text-[#D2042D] transition-colors">
                     {t('contact.emailValue')}
                   </p>
                 </div>

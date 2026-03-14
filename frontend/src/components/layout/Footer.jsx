@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Instagram, Facebook, ArrowRight, Sparkles, Mail } from 'lucide-react';
 
+import Logo from '../../assets/logo.png'; // Optional: If you have a logo image
 const Footer = () => {
   const { t } = useTranslation();
 
@@ -105,19 +106,20 @@ const Footer = () => {
           {/* Brand Column (Spans 2 cols on lg) */}
           <motion.div variants={itemVars} className="col-span-2 lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6 group inline-flex">
-              <div className="text-3xl font-extrabold tracking-tighter text-white flex items-center">
+              <img src={Logo} alt="Reviuxx Logo" className="w-24 object-contain" />
+              {/* <div className="text-3xl font-extrabold tracking-tighter text-white flex items-center">
                 Revi<span className="text-[#D2042D] transition-colors duration-300">uxx</span>
                 <Sparkles size={16} className="text-[#D2042D] ml-1 opacity-80 group-hover:animate-pulse" />
-              </div>
+              </div> */}
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
               {t('footer.description', 'The all-in-one software solution for effective review management, automated responses, and optimizing your online presence to drive more sales.')}
             </p>
             
             {/* Direct Contact */}
-            <a href="mailto:hello@reviuxx.com" className="inline-flex items-center gap-2 text-gray-300 hover:text-[#D2042D] transition-colors font-medium text-sm mb-8 group">
+            <a href="mailto:sales@reviuxx.com" className="inline-flex items-center gap-2 text-gray-300 hover:text-[#D2042D] transition-colors font-medium text-sm mb-8 group">
               <Mail size={16} className="text-gray-500 group-hover:text-[#D2042D] transition-colors" />
-              hello@reviuxx.com
+              sales@reviuxx.com
             </a>
             
             {/* Social Icons */}

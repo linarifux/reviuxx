@@ -199,8 +199,8 @@ const resources = {
         successText: 'Thank you for reaching out. Our team will get back to you shortly.',
         emailLabel: 'Email Us',
         phoneLabel: 'Call Us',
-        emailValue: 'info@reviuxx.com',
-        phoneValue: '015234662968'
+        emailValue: 'sales@reviuxx.com',
+        phoneValue: '+491776624606'
       },
       footer: {
         description: 'The all-in-one software solution for effective review management, automated responses, and optimizing your online presence to drive more sales.'
@@ -404,8 +404,8 @@ const resources = {
         successText: 'Vielen Dank für deine Nachricht. Unser Team wird sich in Kürze bei dir melden.',
         emailLabel: 'Schreib uns',
         phoneLabel: 'Ruf uns an',
-        emailValue: 'info@reviuxx.com',
-        phoneValue: '015234662968'
+        emailValue: 'sales@reviuxx.com',
+        phoneValue: '+491776624606'
       },
       footer: {
         description: 'Die All-in-One-Softwarelösung für effektives Bewertungsmanagement, automatisierte Antworten und die Optimierung deiner Online-Präsenz, um mehr Umsatz zu generieren.'
