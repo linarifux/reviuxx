@@ -12,7 +12,7 @@ const VideoAndStats = () => {
   const stats = t('stats.items', { returnObjects: true });
 
   return (
-    <section className="py-24 sm:py-32 bg-[#050505] relative overflow-hidden">
+    <section id='video' className="py-24 sm:py-32 bg-[#050505] relative overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#D2042D]/10 rounded-full blur-[150px] pointer-events-none z-0" />

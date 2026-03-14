@@ -1,10 +1,26 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Star, TrendingUp, MessageSquare, Play, ShieldCheck, Zap, BarChart3 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const { t } = useTranslation();
+
+  // Smooth scroll handler for the CTAs
+  const handleScrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    
+    if (element) {
+      const headerOffset = 100; // Adjust this to match your navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // Staggered text animations
   const containerVariants = {
@@ -89,23 +105,25 @@ const Hero = () => {
               variants={itemVariants}
               className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto mb-10"
             >
-              <Link 
-                to="/register"
+              <a 
+                href="#pricing"
+                onClick={(e) => handleScrollToSection(e, 'pricing')}
                 className="group relative w-full sm:w-auto flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold transition-all hover:bg-gray-100 hover:scale-105"
               >
                 {t('hero.cta_primary', 'Start Free Trial')}
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
               
-              <Link 
-                to="/demo"
+              <a 
+                href="#video"
+                onClick={(e) => handleScrollToSection(e, 'video')}
                 className="group w-full sm:w-auto flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-semibold transition-all backdrop-blur-md hover:border-[#D2042D]/50"
               >
                 <div className="bg-white/10 p-1.5 rounded-full group-hover:bg-[#D2042D] transition-colors">
                   <Play size={16} className="text-white fill-white ml-0.5" />
                 </div>
                 {t('hero.cta_secondary', 'See how it works')}
-              </Link>
+              </a>
             </motion.div>
 
             {/* Social Proof Avatars */}
