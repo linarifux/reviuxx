@@ -577,7 +577,7 @@ const PlatinumUS = () => {
       {/* Bottom Pricing Section */}
       <div className="p-5 sm:p-6 bg-white/60 border-t border-gray-200/60 mt-auto backdrop-blur-md">
         <PriceRow label="Monthly Price for 20 locations" price="$ 350" link="https://buy.stripe.com/14A5kC87veUr5eo6tx6wE0b"/>
-        <PriceRow label="Yearly Price for 20 locations" price="$ 3500" link="https://buy.stripe.com/00weVc87v4fN9uE2dh6wE0e"/>
+        <PriceRow label="Yearly Price for 20 locations" price="$ 3500" link="https://buy.stripe.com/bJeeVcfzXcMjdKU5pt6wE0c"/>
       </div>
 
     </motion.div>
