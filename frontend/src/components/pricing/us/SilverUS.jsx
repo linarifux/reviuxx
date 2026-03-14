@@ -604,7 +604,7 @@ const reviewSites = [
 
       {/* Bottom Pricing Section */}
       <div className="p-5 sm:p-6 bg-white/60 border-t border-gray-200/60 mt-auto backdrop-blur-md">
-        <PriceRow label="Monthly Price per location" price="$ 178" link="https://buy.stripe.com/14A5kC87veUr5eo6tx6wE0b" />
+        <PriceRow label="Monthly Price per location" price="$ 178" link="https://buy.stripe.com/6oUeVc73r4fN8qA0596wE09" />
       </div>
 
     </motion.div>
