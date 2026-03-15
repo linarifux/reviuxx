@@ -554,11 +554,11 @@ const SilverDE = () => {
             <p className="text-[11px] sm:text-[12px] text-gray-500 font-medium mb-1">Reminders</p>
             <p className="text-[13px] sm:text-[14px] font-bold text-gray-900 leading-none mt-1">Disabled</p>
           </div>
-          <div>
-            <p className="text-[11px] sm:text-[12px] text-gray-500 font-medium mb-1">Free Trial</p>
-            <div className="flex items-center gap-1 mt-1">
-              <p className="text-[13px] sm:text-[14px] font-bold text-gray-900 leading-none">14 days</p>
-              <EllipsisMessageIcon />
+          <div className='underline clickable cursor-pointer' onClick={() => window.open('https://buy.stripe.com/9B69ASdrPh2zgX6g476wE01', '_blank')}>
+            <p className="text-gray-500 font-bold mb-1 text-lg">Free Trial</p>
+            <div className="flex items-center mt-1">
+              <p className="font-bold text-gray-900 leading-none text-lg">14 days</p>
+              <ExternalLink size={16} strokeWidth={2} className="ml-2 text-gray-400" />
             </div>
           </div>
         </div>
