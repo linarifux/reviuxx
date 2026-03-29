@@ -577,7 +577,7 @@ const PlatinumDE = () => {
             <p className="text-[13px] sm:text-[14px] font-bold text-gray-900 leading-none mt-1">Disabled</p>
           </div>
           <div className='underline clickable cursor-pointer' onClick={() => window.open('https://buy.stripe.com/00waEW4Vj8w322ccRV6wE04', '_blank')}>
-            <p className="text-gray-500 font-bold mb-1 text-lg">Free Trial</p>
+            <p className="text-gray-500 font-bold mb-1 text-2xl">Free Trial</p>
             <div className="flex items-center mt-1">
               <p className="font-bold text-gray-900 leading-none text-lg">14 days</p>
               <ExternalLink size={16} strokeWidth={2} className="ml-2 text-gray-400" />
