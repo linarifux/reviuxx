@@ -2,10 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Homepage from './pages/Homepage';
+import NotFoundPage from './pages/NotFoundPage'; // Import the new 404 page
+import { ScrollToTopOnMount } from './ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTopOnMount />
       {/* min-h-screen: Ensures the wrapper is exactly as tall as the viewport (or taller).
         flex flex-col: Stacks children (Navbar, Content, Footer) vertically.
         overflow-x-hidden: Prevents horizontal scrolling from creating layout breaks.
@@ -24,6 +27,10 @@ function App() {
             {/* Future routes will go here */}
             {/* <Route path="/login" element={<Login />} /> */}
             {/* <Route path="/register" element={<Register />} /> */}
+
+            {/* Catch-all route for 404 Not Found Page */}
+            {/* The * path matches any URL that hasn't been defined above */}
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
 
