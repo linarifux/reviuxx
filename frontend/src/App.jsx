@@ -5,6 +5,7 @@ import Homepage from './pages/Homepage';
 import NotFoundPage from './pages/NotFoundPage'; // Import the new 404 page
 import { ScrollToTopOnMount } from './ScrollToTop';
 import TermsPage from './pages/TermsPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
             {/* <Route path="/register" element={<Register />} /> */}
 
             <Route path="/terms" element={<TermsPage />} />
+
+            <Route path="/privacy" element={<PrivacyPolicy />} />
 
             {/* Catch-all route for 404 Not Found Page */}
             {/* The * path matches any URL that hasn't been defined above */}

@@ -330,6 +330,97 @@ const resources = {
             content: 'These Terms, the Order, and any referenced policies (Privacy Policy, DPA) form the entire agreement and supersede prior agreements. In case of conflict, the Order prevails, then these Terms, then the policies.'
           }
         ]
+      },
+      privacy: {
+        title: 'Privacy Policy',
+        subtitle: 'Effective Date: November 10, 2025',
+        sections: [
+          {
+            id: 'who-we-are',
+            title: '1. Who We Are',
+            content: 'Reviuxx LLC ("Reviuxx", "we", "us") is a SaaS provider that helps businesses manage and improve their online reviews and profiles across third‑party platforms.\n**Address:** 1309 Coffeen Avenue, STE 1200, Sheridan, Wyoming 82801, USA\n**Contact:** hello@reviuxx.com'
+          },
+          {
+            id: 'scope',
+            title: '2. Scope of this Notice',
+            content: 'This Privacy Policy describes how we collect, use, disclose, and protect personal information in the United States when you visit our website, contact us, register for a demo or account, or use the Reviuxx platform (the "Service"). If you are located in the European Economic Area (EEA), the United Kingdom, or Switzerland, please refer to our EU/UK/CH Privacy Notice.'
+          },
+          {
+            id: 'information-collected',
+            title: '3. Information We Collect',
+            content: 'We collect the following categories of personal information (examples are illustrative):\n• **Identifiers:** name, employer, job title, business email, business phone, account credentials.\n• **Commercial and transaction information:** subscription plan, billing contact details (processed by our payment providers).\n• **Internet/Network activity:** device and browser type, IP address, pages viewed, referral URLs, timestamps, and actions on our website and Service.\n• **Geolocation data:** approximate location derived from IP address (city/region level).\n• **Professional information:** company/role, industry vertical, location(s) you manage.\n• **User content:** messages, support requests, review workflows, templates and responses you create inside the Service.\n• **Inferences:** preferences, features of interest derived from your interactions (where permitted).\nWe do not knowingly collect sensitive personal information for typical use of our Service.'
+          },
+          {
+            id: 'sources',
+            title: '4. Sources of Personal Information',
+            content: '• **Directly from you:** when you submit forms, sign up, or communicate with us.\n• **Automatically:** via cookies, pixels, and similar technologies when you browse our website or use the Service.\n• **From your organization or team members:** administrators may provide user details to create accounts.\n• **From service providers and partners:** e.g., analytics, advertising technology, payment and hosting providers.'
+          },
+          {
+            id: 'how-we-use',
+            title: '5. How We Use Personal Information',
+            content: '• Provide, operate, and secure the Service; authenticate users and process transactions.\n• Respond to inquiries, provide customer support, and communicate about updates, features, and service messages.\n• Personalize content and improve the Service, including research, testing, and analytics.\n• Send marketing communications with your consent or as permitted by law (you may opt out at any time).\n• Detect, prevent, and address fraud, abuse, and security incidents; comply with legal obligations.\n• Create de‑identified or aggregated data for internal reporting and insights.'
+          },
+          {
+            id: 'sharing',
+            title: '6. Sharing and Disclosure of Personal Information',
+            content: 'We share personal information as follows:\n• **Service providers (processors):** hosting, cloud, analytics, communications, payments, customer support—bound by contract to use data only on our instructions.\n• **Business transfers:** in connection with mergers, acquisitions, financings, or sale of assets.\n• **Legal compliance and protection:** to comply with law or valid legal process, or to protect our rights, users, or the public.\n• **Affiliates:** entities under common ownership or control, subject to this Policy or similar protections.\n• **Advertising/analytics partners:** We may allow third‑party cookies or similar technologies on our website to measure performance and, where permitted, deliver or evaluate advertising. These activities may be considered a “sale” or “sharing” for cross‑context behavioral advertising under certain U.S. state laws. You can opt out as described below.'
+          },
+          {
+            id: 'cookies',
+            title: '7. Cookies and Similar Technologies',
+            content: 'We use cookies and similar technologies to operate, secure, and improve our website and Service.\n• Strictly necessary cookies are used for core functions (e.g., security, session management).\n• Optional analytics/advertising cookies are used only with your consent where required; you can manage settings in our banner or browser.\n• Global Privacy Control (GPC): Where supported, we endeavor to honor browser‑based opt‑out signals as required by applicable law.'
+          },
+          {
+            id: 'retention',
+            title: '8. Data Retention',
+            content: 'We retain personal information for as long as reasonably necessary to provide the Service, comply with our legal obligations, resolve disputes, and enforce our agreements. Retention periods vary by data type and context; we periodically review and de‑identify or delete data when it is no longer needed.'
+          },
+          {
+            id: 'security',
+            title: '9. Security',
+            content: 'We implement reasonable and appropriate technical and organizational safeguards designed to protect personal information against unauthorized access, loss, misuse, or alteration. No method of transmission or storage is 100% secure; we cannot guarantee absolute security.'
+          },
+          {
+            id: 'children',
+            title: '10. Children’s Privacy',
+            content: 'Our Service is intended for business use and is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child provided personal information, please contact us to request deletion.'
+          },
+          {
+            id: 'us-rights',
+            title: '11. Your Privacy Rights (U.S. States)',
+            content: 'Depending on where you live, you may have rights under U.S. state laws (e.g., California, Colorado, Connecticut, Utah, Virginia), including the rights to: (i) know/access certain information; (ii) correct inaccuracies; (iii) delete personal information; (iv) obtain a portable copy; and (v) opt out of certain processing such as targeted advertising ("sharing"), the sale of personal information, or profiling for significant decisions.\nTo exercise rights, email us at hello@reviuxx.com and indicate your state of residence and request. We may need to verify your identity and authority. You will not be discriminated against for exercising your rights. If we deny your request, you may have the right to appeal; instructions will be provided in our response.'
+          },
+          {
+            id: 'ccpa',
+            title: '12. California Notice (CCPA/CPRA)',
+            content: 'Categories of personal information we collect include: identifiers; commercial information; internet/network activity; geolocation (approximate); professional information; user content; and inferences. We use and disclose these categories for the business purposes described above.\n**Sale/Sharing for targeted advertising:** Some website analytics/advertising activities may constitute a “sale” or “sharing” under California law. You can opt out via our cookie banner, by enabling a Global Privacy Control (GPC) signal in your browser, or by contacting us.\n**Sensitive personal information:** We do not use or disclose sensitive personal information for purposes that require a right to limit under California law.\n**Authorized agents:** If you use an authorized agent, we may require proof of authorization and your identity verification.'
+          },
+          {
+            id: 'nevada',
+            title: '13. Nevada Privacy Rights',
+            content: 'Nevada residents may submit a request to opt out of the sale of covered information by contacting hello@reviuxx.com with the subject line “Nevada Do Not Sell Request.”'
+          },
+          {
+            id: 'dnt',
+            title: '14. Do Not Track',
+            content: 'Some browsers send “Do Not Track” (DNT) signals. There is no industry consensus on how to respond; we do not currently respond to DNT. We do, however, make good‑faith efforts to honor Global Privacy Control (GPC) signals where legally required.'
+          },
+          {
+            id: 'international',
+            title: '15. International Data Transfers',
+            content: 'We are based in the United States. If you access the Service from outside the U.S., your information may be transferred to, stored, and processed in the U.S. and other countries. We take steps to protect personal information as described in this Policy and as required by applicable law.'
+          },
+          {
+            id: 'changes',
+            title: '16. Changes to this Privacy Policy',
+            content: 'We may update this Privacy Policy from time to time. The “Effective Date” above indicates when this Policy was last revised. Material changes will be notified through the Service or by other reasonable means.'
+          },
+          {
+            id: 'contact',
+            title: '17. Contact Us',
+            content: 'If you have questions or complaints about this Privacy Policy or our data practices, contact us at:\nReviuxx LLC, 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801, USA\nEmail: hello@reviuxx.com'
+          }
+        ]
       }
     }
   },
@@ -604,6 +695,87 @@ const resources = {
             id: 'schlussbestimmungen',
             title: '13. Schlussbestimmungen',
             content: '13.1 Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts (CISG).\n13.2 Ist der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder hat keinen allgemeinen Gerichtsstand in Deutschland, ist Gerichtsstand – nach Wahl des Anbieters – am Sitz des Anbieters oder des Kunden.\n13.3 Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Anstelle der unwirksamen Bestimmung gilt eine Regelung als vereinbart, die dem wirtschaftlichen Zweck am nächsten kommt.'
+          }
+        ]
+      },
+      privacy: {
+        title: 'Datenschutzerklärung',
+        subtitle: 'Stand: 10.11.2025',
+        sections: [
+          {
+            id: 'verantwortlicher',
+            title: 'Verantwortlicher',
+            content: 'Reviuxx LLC\n1309 Coffeen Avenue, STE 1200\nSheridan, Wyoming 82801, USA\nE-Mail: hello@reviuxx.com\nWeb: https://www.reviuxx.com\nEU-Vertreter nach Art. 27 DSGVO: nicht benannt (nicht erforderlich).'
+          },
+          {
+            id: 'geltungsbereich',
+            title: '1. Geltungsbereich',
+            content: 'Diese Datenschutzerklärung informiert über Art, Umfang und Zwecke der Verarbeitung personenbezogener Daten beim Besuch unserer Website reviuxx.com, bei Kontaktanfragen, Demo-/Account-Registrierungen, der Nutzung unserer SaaS-Plattform „Reviuxx“ sowie bei Marketing-Kommunikation.'
+          },
+          {
+            id: 'kategorien',
+            title: '2. Kategorien verarbeiteter Daten',
+            content: '**Website/Technik:**\n• Server-Logdaten (IP-Adresse, Datum/Uhrzeit, Request-URL, Referrer-URL, User-Agent, Statuscode)\n• Cookie- und Geräte-IDs (sofern eingeholt), Consent-Status\n\n**Kommunikation & Vertrieb:**\n• Kontakt-/Demo-Formulardaten (Name, Unternehmen, Position, E-Mail, Telefon, Nachricht)\n• Termin-/Meetingdaten, Korrespondenz, Notizen (CRM)\n\n**Kund:innen & Plattformnutzung (SaaS):**\n• Accountdaten (Name, geschäftliche Kontaktdaten, Zugangs-/Nutzungsdaten)\n• Inhalts-/Prozessdaten (z. B. Bewertungs-Workflows, Vorlagen, Antworttexte, Protokolle)\n• Metadaten (Zeitpunkte, Rollen, technische Ereignisse)\n\n**Marketing:**\n• Newsletter-/Kampagnendaten (Opt-in, Öffnungen/Klicks – sofern zugestimmt)\n• Web-Analytics/Ads-Daten (nur mit Einwilligung)\n\nBesondere Kategorien i. S. d. Art. 9 DSGVO werden grundsätzlich nicht verarbeitet.'
+          },
+          {
+            id: 'zwecke',
+            title: '3. Zwecke und Rechtsgrundlagen',
+            content: '3.1 Website-Bereitstellung & Sicherheit – Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb).\n3.2 Einwilligungs-/Cookie-Management (CMP) – Art. 6 Abs. 1 lit. c DSGVO (Nachweispflicht), lit. a (Einwilligung für optionale Tools).\n3.3 Kontakt, Demo-Anfragen, Vertrieb – Art. 6 Abs. 1 lit. b (vorvertragliche Maßnahme) bzw. lit. f (B2B-Interesse).\n3.4 Registrierung & Nutzung der Reviuxx-SaaS – Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).\n3.5 Support/Kommunikation – Art. 6 Abs. 1 lit. b / lit. f DSGVO.\n3.6 Newsletter & Direktmarketing (B2B) – Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) bzw. § 7 Abs. 3 UWG (Bestandskunden, Voraussetzungen beachten).\n3.7 Web-Analytics/Tracking/Ads (optional) – Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).'
+          },
+          {
+            id: 'empfaenger',
+            title: '4. Empfänger & Auftragsverarbeiter',
+            content: 'Wir setzen sorgfältig ausgewählte Dienstleister (Auftragsverarbeiter, Art. 28 DSGVO) ein, z. B. für Hosting/Cloud, E-Mail/SMS-Versand, CRM/Support, Consent-Management sowie optional Web-Analytics/Ads. Diese verarbeiten Daten ausschließlich nach Weisung und auf Grundlage eines AV-Vertrags. Eine darüber hinausgehende Weitergabe erfolgt nur, soweit gesetzlich zulässig/erforderlich oder Sie eingewilligt haben.'
+          },
+          {
+            id: 'drittland',
+            title: '5. Drittlandübermittlung',
+            content: 'Als US-Unternehmen können Datenverarbeitungen in Drittländern (insbesondere USA) stattfinden. Solche Übermittlungen werden abgesichert durch Standardvertragsklauseln (SCCs, Art. 46 DSGVO) und – soweit erforderlich – zusätzliche technische/organisatorische Maßnahmen sowie Auftragsverarbeitungsverträge und Transfer-Impact-Assessments.'
+          },
+          {
+            id: 'speicherdauer',
+            title: '6. Speicherdauer',
+            content: '• **Logdaten:** i. d. R. 7–30 Tage.\n• **Kontakt/Vertrieb:** bis Abschluss des Vorgangs + Nachweisfristen (i. d. R. 6–24 Monate).\n• **Vertrags-/Account-Daten:** Vertragslaufzeit + gesetzliche Aufbewahrungsfristen (i. d. R. 6–10 Jahre).\n• **Marketing-Daten:** bis Widerruf/Opt-out bzw. regelmäßige Bereinigung.\n• **Cookies/Analytics:** gemäß Einwilligung/Tool-Lebensdauer.'
+          },
+          {
+            id: 'pflicht',
+            title: '7. Pflicht zur Bereitstellung / Automatisierte Entscheidungen',
+            content: 'Die Bereitstellung von Basisdaten (Kontakt, Account) ist für Vertragsabschluss/Leistungserbringung erforderlich; ohne diese Daten ist eine Nutzung nicht möglich. Automatisierte Entscheidungen einschließlich Profiling im Sinne von Art. 22 DSGVO finden nicht statt.'
+          },
+          {
+            id: 'cookies-tools',
+            title: '8. Cookies & Tools',
+            content: 'Wir verwenden technisch notwendige Cookies (z. B. Session, Security) sowie optionale Tools (Analytics/Ads) nur mit Einwilligung über unser Cookie-Banner. Konkrete Informationen (Anbieter, Laufzeiten, Zweck) enthält das Banner bzw. eine Cookie-Liste auf der Website.'
+          },
+          {
+            id: 'rechte',
+            title: '9. Ihre Rechte (Art. 15–22 DSGVO)',
+            content: 'Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen Verarbeitungen auf Basis von Art. 6 Abs. 1 lit. e/f DSGVO. Erteilte Einwilligungen können Sie jederzeit mit Wirkung für die Zukunft widerrufen.\nZur Ausübung Ihrer Rechte schreiben Sie an: hello@reviuxx.com.\nSie haben zudem das Recht, Beschwerde bei einer Datenschutz-Aufsichtsbehörde einzulegen – insbesondere in dem EU-Mitgliedstaat Ihres Aufenthaltsortes, Ihres Arbeitsplatzes oder des Ortes des mutmaßlichen Verstoßes.'
+          },
+          {
+            id: 'minderjaehrige',
+            title: '10. Minderjährige',
+            content: 'Unser Angebot richtet sich nicht an Personen unter 16 Jahren. Wir verarbeiten wissentlich keine Daten von Minderjährigen.'
+          },
+          {
+            id: 'sicherheit',
+            title: '11. Sicherheit',
+            content: 'Wir treffen angemessene technische und organisatorische Maßnahmen (u. a. Zugriffskontrollen, Verschlüsselung, Protokollierung, Berechtigungskonzepte), um personenbezogene Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen.'
+          },
+          {
+            id: 'drittinhalte',
+            title: '12. Drittinhalte & Links',
+            content: 'Unsere Website kann Links zu Drittangeboten (z. B. Google, TripAdvisor, Yelp, HolidayCheck, Booking.com) enthalten. Für die Datenverarbeitung dieser Anbieter ist deren Datenschutzerklärung maßgeblich.'
+          },
+          {
+            id: 'aenderungen',
+            title: '13. Änderungen dieser Datenschutzerklärung',
+            content: 'Wir aktualisieren diese Erklärung bei Bedarf (z. B. bei neuen Funktionen, Rechtslage oder Dienstleistern). Die jeweils aktuelle Fassung ist auf reviuxx.com abrufbar.'
+          },
+          {
+            id: 'kontakt',
+            title: '14. Kontakt',
+            content: 'E-Mail: hello@reviuxx.com\nPostanschrift: Reviuxx LLC, 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801, USA\n\n*Hinweise zur Transparenz: Diese Datenschutzerklärung ist klar strukturiert und auf ein B2B‑SaaS-Angebot zugeschnitten.*'
           }
         ]
       }
