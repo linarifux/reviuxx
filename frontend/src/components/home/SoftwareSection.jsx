@@ -117,7 +117,7 @@ const SoftwareSection = () => {
                   {/* Card 1 */}
                   <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 relative">
                     <motion.div animate={floatingAnimation} className="absolute -left-4 md:-left-32 top-24 z-20 flex items-center gap-2">
-                      <div className="bg-[#111111] text-white text-xs font-bold px-4 py-2 rounded-xl shadow-xl flex items-center gap-2">
+                      <div className="bg-[#111111] text-white text-xs font-bold px-4 py-2 rounded-xl shadow-xl flex items-center gap-2 lg:ml-16">
                         <Bot size={14} className="text-[#10B981]" /> Reply with AI
                       </div>
                     </motion.div>

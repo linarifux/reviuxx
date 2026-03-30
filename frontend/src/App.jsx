@@ -6,6 +6,7 @@ import NotFoundPage from './pages/NotFoundPage'; // Import the new 404 page
 import { ScrollToTopOnMount } from './ScrollToTop';
 import TermsPage from './pages/TermsPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookieBanner from './components/layout/CookieBanner';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Footer />
         </div>
         
+        <CookieBanner />
       </div>
     </Router>
   );

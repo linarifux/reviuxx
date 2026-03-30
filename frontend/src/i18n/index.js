@@ -421,7 +421,13 @@ const resources = {
             content: 'If you have questions or complaints about this Privacy Policy or our data practices, contact us at:\nReviuxx LLC, 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801, USA\nEmail: hello@reviuxx.com'
           }
         ]
-      }
+      },
+      cookieBanner: {
+        message: 'We use cookies to improve your experience, analyze site traffic, and serve tailored ads. By clicking "Accept All", you consent to our use of cookies.',
+        accept: 'Accept All',
+        decline: 'Decline Essential Only',
+        privacyLink: 'Read Privacy Policy'
+      },
     }
   },
   de: { 
@@ -778,7 +784,13 @@ const resources = {
             content: 'E-Mail: hello@reviuxx.com\nPostanschrift: Reviuxx LLC, 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801, USA\n\n*Hinweise zur Transparenz: Diese Datenschutzerklärung ist klar strukturiert und auf ein B2B‑SaaS-Angebot zugeschnitten.*'
           }
         ]
-      }
+      },
+      cookieBanner: {
+        message: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern, den Website-Traffic zu analysieren und personalisierte Anzeigen bereitzustellen. Durch Klicken auf "Alle akzeptieren" stimmen Sie unserer Verwendung von Cookies zu.',
+        accept: 'Alle akzeptieren',
+        decline: 'Nur essenzielle',
+        privacyLink: 'Datenschutzerklärung lesen'
+      },
     }
   }
 };
