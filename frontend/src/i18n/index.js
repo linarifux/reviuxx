@@ -200,7 +200,7 @@ const resources = {
         emailLabel: 'Email Us',
         phoneLabel: 'Call Us',
         emailValue: 'sales@reviuxx.com',
-        phoneValue: '+491776624606'
+        phoneValue: '+491757443069'
       },
       footer: {
         description: 'The all-in-one software solution for effective review management, automated responses, and optimizing your online presence to drive more sales.'
@@ -622,7 +622,7 @@ const resources = {
         emailLabel: 'Schreib uns',
         phoneLabel: 'Ruf uns an',
         emailValue: 'sales@reviuxx.com',
-        phoneValue: '+491776624606'
+        phoneValue: '+491757443069'
       },
       footer: {
         description: 'Die All-in-One-Softwarelösung für effektives Bewertungsmanagement, automatisierte Antworten und die Optimierung deiner Online-Präsenz, um mehr Umsatz zu generieren.'
