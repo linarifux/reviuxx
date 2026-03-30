@@ -204,6 +204,132 @@ const resources = {
       },
       footer: {
         description: 'The all-in-one software solution for effective review management, automated responses, and optimizing your online presence to drive more sales.'
+      },
+      terms: {
+        title: 'Terms of Service',
+        subtitle: 'Last updated: March 2026',
+        sections: [
+          {
+            id: 'acceptance',
+            title: '1) Acceptance of Terms',
+            content: 'By creating an account, signing an order, or using Reviuxx, you agree to these Terms of Service (“Terms”), our Privacy Policy, and, where applicable, our Data Processing Addendum (DPA). If you are entering these Terms on behalf of a company, you represent that you have authority to bind that company. Do not use the Service if you disagree with these Terms.'
+          },
+          {
+            id: 'definitions',
+            title: '2) Definitions',
+            content: '“Service” means the Reviuxx SaaS platform and related websites, APIs, and support.\n“Customer” / “you” means the company or organization that accepts these Terms.\n“Authorized Users” means individuals you permit to access the Service.\n“Order” means the online checkout, plan selection, or signed order form referencing these Terms.\n“Customer Data” means data you or your Users upload or submit to the Service.'
+          },
+          {
+            id: 'eligibility',
+            title: '3) Eligibility; Business Use Only',
+            content: 'The Service is intended for business customers. If you are a consumer, local law may grant you additional rights; please contact us before using the Service.'
+          },
+          {
+            id: 'account',
+            title: '4) Account Registration & Security',
+            content: 'Provide accurate information and keep it updated. You are responsible for all activities under your accounts and for maintaining the confidentiality of access credentials.'
+          },
+          {
+            id: 'fees',
+            title: '5) Subscription Plans, Fees & Taxes',
+            content: '**Plans & Billing:** Subscriptions are billed in advance per selected plan and billing cycle. Fees are non-refundable except as required by law or expressly stated in an Order.\n**Trials:** Trial access is provided “as is” and may be modified or terminated at any time.\n**Upgrades/Downgrades:** Upgrades take effect immediately and are prorated; downgrades apply from the next renewal.\n**Price Changes:** We may change prices for future periods with prior notice; material increases will be announced at least 30 days in advance. You may cancel before the change takes effect.\n**Taxes:** Fees are exclusive of taxes; you are responsible for applicable taxes (VAT/GST/sales tax) except taxes on our income.\n**Late Payment; Suspension:** We may suspend the Service for overdue amounts after notice. You remain responsible for accrued fees during suspension.'
+          },
+          {
+            id: 'term',
+            title: '6) Term; Cancellation; Termination',
+            content: '**Term:** Your subscription starts on the effective date of your Order and renews automatically unless cancelled.\n**Cancellation:** You may cancel at any time; the subscription remains active through the current paid term.\n**Termination for Cause:** Either party may terminate for material breach if not cured within 30 days of notice. We may suspend or terminate immediately for illegal activity, platform-policy violations, or security risks.\n**Effect:** Upon termination, access ends. We will make Customer Data export available for 30 days unless prohibited by law or third-party terms.'
+          },
+          {
+            id: 'support',
+            title: '7) Access; Availability; Support',
+            content: 'We strive for reliable operations but do not guarantee uninterrupted availability. Planned maintenance may occur. Standard email support is included during business hours unless otherwise agreed.'
+          },
+          {
+            id: 'acceptable-use',
+            title: '8) Acceptable Use & Platform Policies',
+            content: 'You will not: (a) submit or facilitate fake, paid, or deceptive reviews; (b) offer incentives in exchange for positive reviews; (c) gate reviews (e.g., only ask satisfied customers); (d) spam or harass; (e) violate laws or third-party rights; (f) reverse engineer or misuse APIs; or (g) attempt to compromise security. You must comply with the policies and terms of the review platforms you connect to (e.g., Google, TripAdvisor, Yelp, HolidayCheck, Booking.com) and applicable laws (including FTC rules on reviews and anti-spam rules). You are solely responsible for the lawfulness of your outreach (e.g., email/SMS consent).'
+          },
+          {
+            id: 'third-party',
+            title: '9) Third-Party Services & Integrations',
+            content: 'The Service may interoperate with third-party platforms. We are not responsible for third-party services, their availability, or their terms. Platform changes may affect features; we are not liable for resulting limitations.'
+          },
+          {
+            id: 'data',
+            title: '10) Customer Data; Privacy; DPA',
+            content: '**Ownership:** As between the parties, you own Customer Data.\n**License to Operate:** You grant us a non-exclusive, worldwide license to host, process, transmit, display, and create derivatives of Customer Data solely to provide and improve the Service.\n**Privacy & Security:** We process Customer Data per our Privacy Policy and, where applicable, the DPA (GDPR). You are responsible for obtaining all necessary consents for outreach (email/SMS) and for providing legally required notices to your end-customers.\n**Data Export & Deletion:** During the term, you can export Customer Data. After termination, we retain limited backups for a reasonable time or as legally required.'
+          },
+          {
+            id: 'ip',
+            title: '11) Content; IP; Feedback',
+            content: '**Your Content:** You are responsible for the accuracy and legality of content you submit (including outreach templates, responses, media).\n**Our IP:** Reviuxx and all related software, designs, logos, and documentation are owned by Reviuxx LLC and its licensors. No rights are granted except those expressly stated.\n**Feedback:** If you provide suggestions, you grant us a royalty-free, irrevocable license to use them without restriction.'
+          },
+          {
+            id: 'confidentiality',
+            title: '12) Confidentiality',
+            content: 'Non-public information disclosed by either party and marked as confidential (or reasonably understood to be confidential) will be protected and used only for the purposes of the relationship.'
+          },
+          {
+            id: 'warranties',
+            title: '13) Warranties & Disclaimers',
+            content: 'The Service is provided “AS IS” and “AS AVAILABLE.” We disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Service will be error-free, or that reviews will be published by third-party platforms.'
+          },
+          {
+            id: 'liability',
+            title: '14) Limitation of Liability',
+            content: 'To the maximum extent permitted by law: (a) neither party will be liable for indirect, incidental, special, consequential, or punitive damages, or for lost profits or revenues, even if foreseeable; and (b) each party’s aggregate liability arising out of or related to the Service is limited to the amounts paid or payable by you to Reviuxx in the 12 months before the first event giving rise to liability. These limits do not apply to liability for death, personal injury, willful misconduct, or amounts that cannot be excluded under applicable law.'
+          },
+          {
+            id: 'indemnification',
+            title: '15) Indemnification',
+            content: 'You will indemnify and defend Reviuxx against third-party claims arising from (i) your Customer Data, (ii) your use of the Service in violation of these Terms, law, or platform policies, or (iii) your outreach practices (email/SMS) without proper consents. We will indemnify you against third-party claims alleging that the Service, as provided, infringes IP rights, subject to customary carve-outs.'
+          },
+          {
+            id: 'dmca',
+            title: '16) DMCA Agent & Policy',
+            content: 'If you believe content accessible through the Service infringes your copyright, send a notice to our Designated Agent:\n**Name:** Maurice Klapp, Reviuxx LLC\n**Address:** 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801, USA\n**Email:** hello@reviuxx.com\nInclude: (1) identification of the copyrighted work, (2) identification of the infringing material, (3) contact information, (4) a good-faith statement, (5) a statement under penalty of perjury, and (6) your physical or electronic signature.'
+          },
+          {
+            id: 'export',
+            title: '17) Export Controls; Anti-Corruption; Sanctions',
+            content: 'You represent that you are not located in or a resident of any embargoed country and are not a prohibited party under trade sanctions. You will comply with anti-corruption laws and will not offer or accept bribes.'
+          },
+          {
+            id: 'governing-law',
+            title: '18) Governing Law & Dispute Resolution',
+            content: '**Governing Law:** The laws of the State of Wyoming, without regard to conflicts of laws, govern these Terms.\n**Venue:** The state and federal courts located in Sheridan County, Wyoming shall have exclusive jurisdiction, and the parties consent to personal jurisdiction and venue there.\n**Arbitration:** Disputes will be resolved by binding arbitration under the AAA Commercial Rules in English, in the United States, on an individual basis; no class actions.'
+          },
+          {
+            id: 'changes',
+            title: '19) Changes to Service or Terms',
+            content: 'We may update the Service and these Terms from time to time. If changes are material, we will provide notice. Continued use after the effective date constitutes acceptance.'
+          },
+          {
+            id: 'publicity',
+            title: '20) Publicity',
+            content: 'We may use your name and logo to identify you as a customer, unless you opt out by emailing hello@reviuxx.com.'
+          },
+          {
+            id: 'beta',
+            title: '21) Beta Features',
+            content: 'Features labeled as Beta or Preview are provided “as is,” may change, and may be discontinued at any time.'
+          },
+          {
+            id: 'assignment',
+            title: '22) Assignment',
+            content: 'You may not assign or transfer the Agreement without our prior written consent; we may assign to an affiliate or in connection with a merger, acquisition, or sale of assets.'
+          },
+          {
+            id: 'force-majeure',
+            title: '23) Force Majeure',
+            content: 'Neither party is liable for delays or failures due to events beyond reasonable control (e.g., internet or hosting outages, acts of God, governmental actions).'
+          },
+          {
+            id: 'entire-agreement',
+            title: '24) Entire Agreement; Order of Precedence',
+            content: 'These Terms, the Order, and any referenced policies (Privacy Policy, DPA) form the entire agreement and supersede prior agreements. In case of conflict, the Order prevails, then these Terms, then the policies.'
+          }
+        ]
       }
     }
   },
@@ -409,6 +535,77 @@ const resources = {
       },
       footer: {
         description: 'Die All-in-One-Softwarelösung für effektives Bewertungsmanagement, automatisierte Antworten und die Optimierung deiner Online-Präsenz, um mehr Umsatz zu generieren.'
+      },
+      terms: {
+        title: 'Allgemeine Geschäftsbedingungen (AGB)',
+        subtitle: 'Stand: März 2026',
+        sections: [
+          {
+            id: 'geltungsbereich',
+            title: '1. Geltungsbereich',
+            content: '1.1 Diese AGB gelten für alle Verträge über die Nutzung der Online-Plattform „Reviuxx“ (SaaS-Lösung zur Generierung, Verwaltung und Beantwortung von Online-Bewertungen auf Drittplattformen).\n1.2 Abweichende, entgegenstehende oder ergänzende AGB des Kunden werden nicht Vertragsbestandteil, es sei denn, wir stimmen ihrer Geltung ausdrücklich schriftlich zu.\n1.3 Sofern nicht anders angegeben, richtet sich unser Angebot an Unternehmer i. S. d. § 14 BGB. Bei Verträgen mit Verbrauchern können zusätzliche Informations- und Widerrufspflichten gelten.'
+          },
+          {
+            id: 'vertragsgegenstand',
+            title: '2. Vertragsgegenstand',
+            content: '2.1 Wir stellen dem Kunden für die Vertragslaufzeit die Reviuxx-Software ausschließlich über das Internet zur Nutzung bereit (Software-as-a-Service). Eine Überlassung der Software zur lokalen Installation erfolgt nicht.\n2.2 Der konkrete Funktions- und Leistungsumfang ergibt sich aus der jeweils aktuellen Paketbeschreibung auf unserer Website bzw. aus dem Angebot/der Auftragsbestätigung.\n2.3 Wir schulden keine Veröffentlichung oder Sichtbarkeit von Bewertungen auf Drittplattformen (Google, TripAdvisor, Yelp, HolidayCheck, Booking.com etc.), da dies im Einflussbereich der jeweiligen Plattformbetreiber liegt.\n2.4 Wir sind berechtigt, zur Leistungserbringung Unterauftragnehmer/Dienstleister (z. B. Hosting) einzusetzen.'
+          },
+          {
+            id: 'vertragsschluss',
+            title: '3. Vertragsschluss',
+            content: '3.1 Die Darstellung der Leistungen auf der Website stellt kein rechtlich bindendes Angebot dar.\n3.2 Ein Vertrag kommt zustande durch (a) Online-Buchung/Registrierung und unsere Bestätigungs-E-Mail oder (b) Unterzeichnung eines Angebots/Vertrags.\n3.3 Der Kunde sichert zu, bei der Registrierung vollständige und richtige Angaben zu machen und diese während der Vertragslaufzeit aktuell zu halten.'
+          },
+          {
+            id: 'pflichten',
+            title: '4. Nutzungsrechte und Pflichten des Kunden',
+            content: '4.1 Der Kunde erhält für die Dauer des Vertrages ein einfaches, nicht übertragbares und nicht unterlizenzierbares Nutzungsrecht an der Software.\n4.2 Zugangsdaten sind geheim zu halten. Der Kunde ist für sämtliche Aktivitäten verantwortlich, die unter seinen Accounts erfolgen.\n4.3 Der Kunde ist verpflichtet, keine verbotenen Anreize für positive Bewertungen zu geben, kein Review-Gating zu betreiben und die Richtlinien der angebundenen Plattformen einzuhalten.\n4.4 Der Kunde ist selbst dafür verantwortlich, dass der Versand von E-Mails/SMS an Endkunden (z. B. Bewertungsaufforderungen) datenschutz- und wettbewerbsrechtlich zulässig ist (DSGVO, UWG).\n4.5 Rechtswidrige oder missbräuchliche Nutzung (Fake-Bewertungen, Spam, rechtswidrige Inhalte) ist untersagt. Bei Verstößen sind wir zur Sperrung berechtigt.'
+          },
+          {
+            id: 'verfuegbarkeit',
+            title: '5. Verfügbarkeit',
+            content: '5.1 Wir stellen die SaaS-Leistung mit einer jährlichen Verfügbarkeit von 98 % bereit. Ausgenommen sind angekündigte Wartungen sowie Ausfälle außerhalb unseres Einflussbereichs (höhere Gewalt, Störungen bei Dritten).\n5.2 Bei wesentlichen Störungen bemühen wir uns um zeitnahe Behebung.'
+          },
+          {
+            id: 'preise',
+            title: '6. Preise und Zahlungsbedingungen',
+            content: '6.1 Die Vergütung richtet sich nach dem gebuchten Paket und ist, sofern nichts anderes vereinbart ist, monatlich im Voraus fällig.\n6.2 Alle Preise verstehen sich netto zuzüglich ggf. anfallender Umsatzsteuer nach anwendbarem Recht.\n6.3 Preisänderungen für zukünftige Abrechnungsperioden sind nach mindestens 12 Monaten Vertragslaufzeit mit Ankündigung von 30 Tagen möglich; bei Erhöhungen >10 % steht dem Kunden ein Sonderkündigungsrecht zu.\n6.4 Bei Zahlungsverzug sind wir nach vorheriger Ankündigung zur Sperrung des Zugangs berechtigt; die Zahlungspflicht bleibt bestehen.'
+          },
+          {
+            id: 'laufzeit',
+            title: '7. Laufzeit und Kündigung',
+            content: '7.1 Sofern nichts anderes vereinbart ist, läuft der Vertrag auf unbestimmte Zeit mit einer Mindestlaufzeit von 1 Monat.\n7.2 Nach Ablauf der Mindestlaufzeit kann der Vertrag mit einer Frist von 14 Tagen zum Monatsende gekündigt werden (Textform ausreichend, z. B. E-Mail).\n7.3 Das Recht zur fristlosen Kündigung aus wichtigem Grund bleibt unberührt (z. B. erhebliche Vertragsverletzungen, Zahlungsverzug > 30 Tage, rechtswidrige Nutzung).'
+          },
+          {
+            id: 'support',
+            title: '8. Support',
+            content: '8.1 Standard-Support per E-Mail während unserer Geschäftszeiten ist im Paket enthalten (montags bis freitags; ausgenommen Feiertage).\n8.2 Erweiterte Leistungen (Onboarding, Integrationen, individuelle Anpassungen) werden gesondert vergütet.'
+          },
+          {
+            id: 'haftung',
+            title: '9. Haftung',
+            content: '9.1 Wir haften unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie bei Verletzung von Leben, Körper oder Gesundheit.\n9.2 Bei einfacher Fahrlässigkeit haften wir nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten); in diesem Fall ist die Haftung der Höhe nach auf den vertragstypischen, vorhersehbaren Schaden begrenzt.\n9.3 Eine Haftung für entgangenen Gewinn, ausgebliebene Einsparungen sowie mittelbare und Folgeschäden ist ausgeschlossen, sofern nicht Vorsatz vorliegt.\n9.4 Für Datenverlust haften wir nur in Höhe des typischen Wiederherstellungsaufwands, der bei ordnungsgemäßer Datensicherung durch den Kunden eingetreten wäre.\n9.5 Zwingende Haftung nach Produkthaftungsgesetz oder DSGVO bleibt unberührt.'
+          },
+          {
+            id: 'datenschutz',
+            title: '10. Datenschutz / Auftragsverarbeitung',
+            content: '10.1 Soweit wir personenbezogene Daten im Auftrag des Kunden verarbeiten, schließen die Parteien einen Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO).\n10.2 Der Kunde bleibt Verantwortlicher im Sinne der DSGVO für die Verarbeitung seiner Kundendaten (Rechtsgrundlagen, Informationspflichten, Opt-ins).\n10.3 Unsere Datenschutzerklärung ist über unsere Website abrufbar.'
+          },
+          {
+            id: 'rechte',
+            title: '11. Rechte an der Software',
+            content: '11.1 Sämtliche Rechte an der Software verbleiben beim Anbieter; es werden ausschließlich die vertraglich eingeräumten Nutzungsrechte gewährt.\n11.2 Dem Kunden werden keine Rechte am Quellcode eingeräumt.'
+          },
+          {
+            id: 'vertraulichkeit',
+            title: '12. Vertraulichkeit',
+            content: 'Beide Parteien behandeln alle im Rahmen des Vertragsverhältnisses bekannt werdenden Geschäfts- und Betriebsgeheimnisse vertraulich.'
+          },
+          {
+            id: 'schlussbestimmungen',
+            title: '13. Schlussbestimmungen',
+            content: '13.1 Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts (CISG).\n13.2 Ist der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder hat keinen allgemeinen Gerichtsstand in Deutschland, ist Gerichtsstand – nach Wahl des Anbieters – am Sitz des Anbieters oder des Kunden.\n13.3 Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Anstelle der unwirksamen Bestimmung gilt eine Regelung als vereinbart, die dem wirtschaftlichen Zweck am nächsten kommt.'
+          }
+        ]
       }
     }
   }

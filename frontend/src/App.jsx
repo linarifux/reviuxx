@@ -4,6 +4,7 @@ import Footer from './components/layout/Footer';
 import Homepage from './pages/Homepage';
 import NotFoundPage from './pages/NotFoundPage'; // Import the new 404 page
 import { ScrollToTopOnMount } from './ScrollToTop';
+import TermsPage from './pages/TermsPage';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
             {/* Future routes will go here */}
             {/* <Route path="/login" element={<Login />} /> */}
             {/* <Route path="/register" element={<Register />} /> */}
+
+            <Route path="/terms" element={<TermsPage />} />
 
             {/* Catch-all route for 404 Not Found Page */}
             {/* The * path matches any URL that hasn't been defined above */}
